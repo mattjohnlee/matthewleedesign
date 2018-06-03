@@ -1,0 +1,25 @@
+.tags {
+  margin-bottom: 2em;
+  overflow: hidden;
+
+  li {
+    display: inline;
+    margin: 0 .25em 0 0;
+    text-indent: 0;
+
+    &:after {
+      content: ',';
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+.tag-label {
+  float: left;
+  margin-right: .25em;
+}

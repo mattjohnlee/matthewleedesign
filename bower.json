@@ -1,0 +1,7 @@
+{
+  "name": "matthewleedesign-2018",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

@@ -1,0 +1,182 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Basic font style mixins
+////////////////////////////////////////////////////////////////////////////
+*/
+
+@mixin font-regular { 
+  font-family: 'CustomFont', $serif;
+  font-weight: $font-weight-regular;
+}
+
+@mixin font-bold { 
+  font-family: 'CustomFont', $serif;
+  font-weight: $font-weight-bold;
+}
+
+@mixin font-italic { 
+  font-family: 'CustomFont', $serif;
+  font-weight: $font-weight-regular;
+  font-style:   italic;
+}
+
+@mixin font-bolditalic { 
+  font-family: 'CustomFont', $serif;
+  font-weight: $font-weight-bold;
+  font-style:   italic;
+}
+
+@mixin font-heading { 
+  font-family: $font-family-heading;
+  font-weight: $font-weight-light;
+}
+
+@mixin font-headingitalic { 
+  font-family: $font-family-heading;
+  font-weight: $font-weight-light;
+  font-style:   italic;
+}
+
+@mixin font-fallback { 
+  font-family: $sans;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Block-level typographic elements
+////////////////////////////////////////////////////////////////////////////
+*/
+
+@mixin link {
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: $color-link--active;
+    text-decoration: underline;
+  }
+}
+
+@mixin body-text {
+  @include font-regular;
+  color: $color-text;
+  font-size: $font-size-base; 
+  line-height: $line-height-base;
+
+  a {
+    @include link;
+  }
+}
+
+@mixin heading-text {
+  @include font-heading;
+  color: $color-heading;
+  line-height: $line-height-heading;
+  margin: $font-margin--heading-text;
+
+  a {
+    @include link;
+  }
+}
+
+@mixin heading-1 {
+  @include heading-text;
+  font-size: $font-size-h1; 
+}
+
+@mixin heading-2 {
+  @include heading-text;
+  font-size: $font-size-h2; 
+}
+
+@mixin heading-3 {
+  @include heading-text;
+  font-size: $font-size-h3; 
+}
+
+@mixin heading-4 {
+  @include heading-text;
+  font-size: $font-size-h4; 
+}
+
+@mixin heading-5 {
+  @include heading-text;
+  font-size: $font-size-h5; 
+}
+
+@mixin heading-6 {
+  @include heading-text;
+  font-size: $font-size-h6; 
+}
+
+@mixin paragraph {
+  @include body-text;
+}
+
+@mixin li {
+  @include body-text;
+}
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Stylistic applications
+////////////////////////////////////////////////////////////////////////////
+*/
+
+@mixin ul-null {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin caps {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@mixin smallcaps {
+  @include caps;
+  font-size: $font-size-small;
+}
+
+@mixin small {
+  font-size: $font-size-small;
+}
+
+// Fancy Underline
+// -------
+// FOR: Styling links that (1)retain the base text color; (2)have a nice thin underline that clears descenders; (3)changes to the link color on hover/focus
+// USE: @include fancy-underline;
+// USE: @include fancy-underline($text-color, $text-shadow-color, $link-color);
+
+@mixin fancy-underline($text-color:inherit, $text-shadow-color:$white, $link-color:$link-color) {
+  color: $text-color;
+  box-shadow: inset 0 -1px 0 0 $link-color;
+  text-shadow: 1px 1px 0 $text-shadow-color, -1px 1px 0 $text-shadow-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $link-color;
+  }  
+}
+
+// Fancy Underline--Subtle
+// -------
+// FOR: Links that look like normal text, but only get the "fancy underline" on hover (usually used on headings)
+// USE: @include fancy-underline--subtle;
+// USE: @include fancy-underline--subtle($text-color, $text-shadow-color, $link-color);
+
+@mixin fancy-underline--subtle($text-color:inherit, $text-shadow-color:$white, $link-color:$link-color) {
+  position: relative;
+  color: $text-color;
+  box-shadow: inset 0 0 0 0 $link-color;
+
+  &:hover {
+    color: $text-color;
+    box-shadow: inset 0 -1px 0 0 $link-color;
+    text-shadow: 1px 1px 0 $text-shadow-color, -1px 1px 0 $text-shadow-color;
+    text-decoration: none;
+  }  
+}

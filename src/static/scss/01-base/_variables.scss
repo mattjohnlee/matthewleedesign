@@ -1,0 +1,177 @@
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Gray values
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$color-gray-0: #000000;
+$color-gray-1: tint($color-gray-0, 10%);
+$color-gray-2: tint($color-gray-0, 20%);
+$color-gray-3: tint($color-gray-0, 30%);
+$color-gray-4: tint($color-gray-0, 40%);
+$color-gray-5: tint($color-gray-0, 50%);
+$color-gray-6: tint($color-gray-0, 60%);
+$color-gray-7: tint($color-gray-0, 70%);
+$color-gray-8: tint($color-gray-0, 80%);
+$color-gray-9: tint($color-gray-0, 90%);
+$color-gray-f: #ffffff;
+
+$color-black: $color-gray-0;
+$color-white: $color-gray-f;
+$color-gray: $color-gray-5;
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Color values -- primary
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$color-red: red;
+$color-orange: orange;
+$color-yellow: yellow;
+$color-green: green;
+$color-blue: blue;
+$color-indigo: indigo;
+$color-violet: violet;
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Standard applications of color variables
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$color-base: $color-black;
+
+$color-background: $color-white;
+$color-background--tint: lighten($color-base, 50%);
+
+$color-text: $color-base;
+$color-text--light: lighten($color-text, 30%);
+$color-text--invert: $color-white;
+
+$color-heading: $color-text;
+$color-caption: $color-text--light;
+
+$color-link: $color-blue;
+$color-link--active: $color-green;
+
+$color-selection-bg: rgba($color-link,.2);
+$color-selection-text: $color-text;
+
+$color-error: $color-red;
+$color-valid: $color-green;
+
+$color-button: $color-link;
+$color-button--active: $color-link--active;
+$color-button-text: $color-text--invert;
+
+$color-border: $color-gray-8;
+
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Typographic variables
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$font-family-sans: Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, 'Times New Roman', serif;
+$font-family-display: $font-family-sans;
+$font-family-monospace: Courier, monospace;
+
+$sans: $font-family-sans;
+$serif: $font-family-serif;
+$display: $font-family-display;
+$mono: $font-family-monospace;
+
+$font-family-base: $font-family-sans;
+$font-family-heading: $font-family-sans;
+
+
+$font-size-base: 1rem;
+$font-size-small: .8rem;
+$font-size-h1: 2.75rem; 
+$font-size-h2: 2.25rem; 
+$font-size-h3: 1.5rem; 
+$font-size-h4: 1.2rem; 
+$font-size-h5: 1rem; 
+$font-size-h6: .8rem; 
+$font-size-p: $font-size-base;
+$font-size-caption: $font-size-small;
+
+
+$line-height-base: 1.5;
+$line-height-small: 1.2;
+$line-height-body: $line-height-base;
+$line-height-p: $line-height-base;
+$line-height-heading: $line-height-small;
+
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+$font-weight-light: 200;
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Layout/spacing variables
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$spacing-xxs: .25rem;
+$spacing-xs: .5rem;
+$spacing-sm: .75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+$spacing-section: $spacing-xl;
+$form-padding: $spacing-sm;
+
+$font-margin--body-text: 0 0 $spacing-md;
+$font-margin--heading-text: 0 0 $spacing-xs;
+
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Breakpoints
+////////////////////////////////////////////////////////////////////////////
+*/
+
+
+$s: 600px;
+$m: 768px;
+$l: 1024px;
+$l2: 1200px;
+$xl: 1400px;
+$nav-breakpoint: $l;
+$container-max-width: 1170px;
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+z-index
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$zIndex-0: 1;
+$zIndex-1: 100;
+$zIndex-2: 200;
+$zIndex-3: 300;
+$zIndex-4: 400;
+$zIndex-5: 500;
+$zIndex-6: 600;
+$zIndex-7: 700;
+$zIndex-8: 800;
+$zIndex-9: 900;
+$zIndex-10: 1000;
+
+

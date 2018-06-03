@@ -1,0 +1,61 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Images, iframes, figures
+////////////////////////////////////////////////////////////////////////////
+*/
+
+
+img, iframe {
+  max-width: 100%;
+  -webkit-transform: translateZ(0);
+}
+
+figure {
+  margin: 0 0 2em 0; 
+
+  figcaption {
+    @include paragraph;
+    @include font-regular;
+    @include small;
+    color: $color-caption;
+    margin-top: .5em;
+  }
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.hero {
+  position: relative;
+  @include mq($s) {
+    max-height: 25rem;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .hero-text {
+    @include mq($s) {
+      @include center-vertical;
+    }
+  }
+}
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%; /* maintain aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: $spacing-section;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

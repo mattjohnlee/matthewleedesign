@@ -1,0 +1,34 @@
+.breadcrumbs {
+  display: none;
+  list-style: none;
+
+  @include mq($s) {
+    display: block;
+  }
+  
+  li {
+    @include font-regular;
+    font-size: .75em;
+    line-height: 0;
+    display: inline-block;
+
+    &:after {
+      content: '>';
+      color: $color-caption;
+      padding: 0 .125rem 0 0.5em;
+    }
+
+    a {
+    }
+
+    &:last-child {
+      a {
+        color: $color-caption;
+      }
+
+      &:after {
+        content: '';        
+      }
+    }
+  }
+}

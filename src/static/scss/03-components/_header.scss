@@ -1,0 +1,5 @@
+header {
+	ul, ol { //clear styling from nav-based lists
+		@include ul-null;
+	}
+}

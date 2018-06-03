@@ -1,0 +1,17 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Color functions -- making up for Compass
+////////////////////////////////////////////////////////////////////////////
+*/ 
+
+// Slightly lighten a color
+@function tint($color, $percentage) {
+  @return mix($color, white, 100%-$percentage);
+}
+
+// Slightly darken a color
+@function shade($color, $percentage) {
+  @return mix($color, black, 100%-$percentage);
+}
+
+

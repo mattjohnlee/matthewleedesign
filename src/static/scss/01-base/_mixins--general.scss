@@ -1,0 +1,194 @@
+// clearfix
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Usage: @include clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+// The Media Query Mixin
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// FOR: Write less verbose Media Queries with variables
+// or using straight figures (eg 320px)
+// WHY: Faster to write. More flexible. Lets you write
+// media query variables on the fly.
+// USE: @include mq(320px, 798px);
+// USE: @include mq($tablet, $desktop);
+// USE: @include mq(max, $desktop);
+
+@mixin mq($bp-1, $bp-2:null) {
+    @if $bp-1 == "max" {
+        @media (max-width:$bp-2 - 1) {
+            @content;
+        }
+    }
+    @elseif $bp-2 == "max" {
+        @media (max-width:$bp-1 - 1) {
+            @content;
+        }
+    }
+    @elseif $bp-2 == null {
+        @media (min-width:$bp-1) {
+            @content;
+        }
+    }
+    //single bp
+
+    @else {
+        @media (min-width:$bp-1) and (max-width:$bp-2 - 1) {
+            @content;
+        }
+    }
+    //bracketed breakpoint
+}
+
+
+
+
+
+@mixin fluid-font-size($tween-start: 16px 400px, $tween-end: 100px 1400px, $use-mq: true) {
+  $min-size: nth($tween-start, 1);
+  $max-size: nth($tween-end, 1);
+  $min-width: nth($tween-start, 2);
+  $max-width: nth($tween-end, 2);
+
+  @if $use-mq {
+    font-size: $min-size;
+    @include mq($min-width, $max-width) {
+      font-size: calc(#{$min-size} + (#{strip-units($max-size)} - #{strip-units($min-size)}) * (100vw - #{$min-width}) / (#{strip-units($max-width)} - #{strip-units($min-width)}));
+    }
+    @include mq($max-width) {
+      font-size: $max-size;
+    }
+  } @else {
+    font-size: calc(#{$min-size} + (#{strip-units($max-size)} - #{strip-units($min-size)}) * (100vw - #{$min-width}) / (#{strip-units($max-width)} - #{strip-units($min-width)}));
+  }
+}
+
+
+// Ellipsis
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Why: We want to overflow with an ellipsis!
+// Use: @include ellipsis
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+// Visually Hidden
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Hide elements visually but not from screen readers. Great for accessibility hints like skip to content. Uses Sass placeholder selector (%).
+// Usage: @extend %visuallyhidden
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+
+
+// Incremented transition thing...
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+@mixin increment-trans($offset-increment: .05s, $trans-count: 5, $offset-delay: 0) {
+  @for $i from 1 through $trans-count {
+    $time: ($i * $offset-increment) + $offset-delay;
+    &:nth-child(#{$i}) {
+      transition-delay: $time;
+    }
+  }
+}
+
+// This mixin can be used to increment the transition or animation delay of sibling elements using the :nth-child(n) selector, most commonly <li>'s in a <ul>.
+// -------
+// Parameter Definitions
+// $offset = the time between transitions / animations
+// $count = the number of items animating
+// $delay = adds a delay to the series of animations
+// $type = specifies the type of delay. This can be either transition or animation.
+// see http://codepen.io/nathanhass/pen/LVVxwg
+
+@mixin increment-delay($offset: .1s, $count: 10, $delay: 0, $type: transition) {
+  @for $i from 1 through $count {
+    $time: ($i * $offset) + $delay;
+    &:nth-child(#{$i}) {
+      #{$type}-delay: $time;
+    }
+  }
+}
+
+
+
+// Form element mixins
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// FOR: 
+// USE: 
+
+@mixin button {
+    appearance: none;
+    border-radius: 0;
+    @include font-regular;
+    background: $color-link;
+    color: white !important;
+    @include smallcaps;
+    width: auto;
+    cursor: pointer;
+    display: block;
+    padding: $form-padding;
+    border: none;
+
+    &:hover, &:focus {
+      background: $color-link--active;
+      border: none;
+      text-decoration: none;
+    }
+}
+
+@mixin button-form {
+  @include button;
+  border: 0 none;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+@mixin button-disabled {
+  @include button;
+  background: tint($color-text, 90%);
+  &:hover,
+  &:focus {
+    background: tint($color-text, 90%);
+    cursor: default;
+  }
+}
+
+
+
+// Input Default
+// -------
+// FOR: Removing borders, shadows, and outlines for inputs
+// USE: @include input-default;
+
+@mixin input-default {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  &:focus {
+    outline: 0;
+  }
+}
+

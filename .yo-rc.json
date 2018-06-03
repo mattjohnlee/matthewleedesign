@@ -1,0 +1,17 @@
+{
+  "generator-puppy": {
+    "projectName": "matthewleedesign 2018",
+    "projectDesc": "",
+    "features": [
+      "includeJQuery",
+      "includeModernizr"
+    ],
+    "includeAuth": false,
+    "includeIndex": true,
+    "includeSampleData": true,
+    "includeFactories": false,
+    "useESNext": false,
+    "runDate": "2018-05-19T20:13:23.428Z",
+    "runVersion": "0.7.0"
+  }
+}

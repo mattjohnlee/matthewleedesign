@@ -1,0 +1,162 @@
+$dropdown-width: 12em;
+
+a.menu-link {
+	float: right;
+	display: block;
+	padding: 1em;
+}
+
+.menu {
+	clear: both;
+	transition: all 0.3s ease-out;
+
+	> ul {
+		border-top: 1px solid #808080;
+		margin: 0;
+
+		ul {
+			clear: both;
+			margin: 0;
+			transition: all 0.3s ease-out;
+		}
+	}
+
+	li {
+		list-style: none;
+		margin: 0;
+
+		a {
+			color: #000;
+			display: block;
+			padding: 0.8em;
+			border-bottom: 1px solid #808080;
+			position: relative;
+		}
+
+		&.has-subnav > a {
+			&:after {
+				content: '+';
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: block;
+				font-size: 1.5em;
+				padding: 0.25em 0.5em;
+			}
+
+			&.active:after {
+				content: "-";
+			}
+		}
+	}
+}
+
+.js {
+	.menu {
+		overflow: hidden;
+		max-height: 0;
+		background: rgba(0, 0, 0, 0.1);
+
+		> ul ul {
+			overflow: hidden;
+			max-height: 0;
+			background: rgba(0, 0, 0, 0.1);
+		}
+	}
+}
+
+.menu.active, .js .menu > ul ul.active {
+	max-height: 55em;
+}
+
+
+
+@include mq($m) {
+	a.menu-link {
+		display: none;
+	}
+
+	.js {
+		.menu {
+			max-height: none;
+			overflow: visible;
+			background: none;
+
+			> ul {
+				ul {
+					max-height: none;
+					overflow: visible;
+					background: none;
+					background: #808080;
+					display: none;
+				}
+
+				li:hover > ul {
+					display: block;
+					max-height: 999px;
+				}
+			}
+		}
+	}
+
+	.menu {
+		ul {
+		  margin: 0;
+		  border: 0;
+		}
+
+		li {
+			a {
+				border: 0;
+			}
+			
+			&.has-subnav > a {
+				padding-right: 2em;
+
+				&:after {
+					content: ">";
+					font-size: 1em;
+					padding: 0.8em 0.5em;
+				}
+			}
+		}
+
+		.level-1 > li.has-subnav > a:after {
+			content: "▼";
+		}
+
+	    > ul {
+			li {
+	        	margin: 0;
+	    	}
+
+	    	> li {
+	        	display: inline-block;
+	        	position: relative;
+	    	}
+
+	    	ul {
+		        position: absolute;
+		        top: 0;
+		        left: 100%;
+		        width: $dropdown-width;
+		
+		        li {
+		          position: relative;
+		        }
+
+				&.level-2 {
+					top: 3em;
+					left: 0;
+					background-color: $color-gray-6;
+				}
+				&.level-3 {
+					background-color: $color-gray-7;
+				}
+				&.level-4 {
+					background-color: $color-gray-8;
+				}
+	    	}
+	    }
+	}
+}

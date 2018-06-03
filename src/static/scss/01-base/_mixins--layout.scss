@@ -1,0 +1,147 @@
+// Margin auto
+// -------
+// FOR: centering something with auto left/right margins, but you don't want to affect the top/bottom margins
+// USE: @include margin-auto;
+
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+@mixin container($maxwidth: 75rem) {
+  position: relative;
+  margin: auto;
+  max-width: $maxwidth;
+  padding: 0 $grid-padding;
+  @include clearfix;
+  clear: both;
+}
+
+
+
+
+@mixin divider-top($border-weight:1px, $spacing:1em, $color-border:auto) {
+  padding-top: $spacing/2;
+  border-top: $border-weight solid;
+  margin-top: $spacing;
+  border-color: $color-border;
+}
+
+@mixin divider-right($border-weight:1px, $spacing:1em, $color-border:auto) {
+  padding-right: $spacing/2;
+  border-right: $border-weight solid;
+  margin-right: $spacing;
+  border-color: $color-border;
+}
+
+@mixin divider-bottom($border-weight:1px, $spacing:1em, $color-border:auto) {
+  padding-bottom: $spacing/2;
+  border-bottom: $border-weight solid;
+  margin-bottom: $spacing;
+  border-color: $color-border;
+}
+
+@mixin divider-left($border-weight:1px, $spacing:1em, $color-border:auto) {
+  padding-left: $spacing/2;
+  border-left: $border-weight solid;
+  margin-left: $spacing;
+  border-color: $color-border;
+}
+
+
+@mixin divider-none {
+  padding: 0;
+  border: 0 none;
+  margin: 0;
+}
+
+// Usage: @include center-vertical
+@mixin center-vertical {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    .lt-ie9 & {
+        top:auto;
+    }
+}
+
+
+
+// Fullbleed image mixin
+// -------
+// FOR: making items full-browser-width when inside a limited-width parent
+// NOTE: The parent must be centered in the browser for this technique to work
+
+@mixin fullbleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+
+
+// Absolute Positioning
+// -------
+// FOR: Quickly setting the top, right, left, and bottom positions of an absolutely positioned element
+// WHY: It's verbose to write everytime in CSS
+// USE: @include absolute(0 0 10px 0);
+
+@mixin absolute($coordinates: n n n n, $fixed: false) {
+
+  $top: nth($coordinates, 1);
+  $right: nth($coordinates, 2);
+  $bottom: nth($coordinates, 3);
+  $left: nth($coordinates, 4);
+
+  @if $fixed == true {
+    position: fixed;
+  }
+  @else {
+    position: absolute;
+  }
+
+  @if $top == auto or $top == a {
+    top: auto;
+  }
+  // Print nothing if we write an "n" or "none"
+  @else if $top == n or $top == none {
+  }
+  @else {
+    top: $top;
+  }
+
+  @if $right == auto or $right == a {
+    right: auto;
+  }
+  // Print nothing if we write an "n" or "none"
+  @else if $right == n or $right == none {
+  }
+  @else {
+    right: $right;
+  }
+
+  @if $bottom == auto or $bottom == a {
+    bottom: auto;
+  }
+  // Print nothing if we write an "n" or "none"
+  @else if $bottom == n or $bottom == none{
+  }
+  @else {
+    bottom: $bottom;
+  }
+
+  @if $left == auto or $left == a {
+    left: auto;
+  }
+  // Print nothing if we write an "n" or "none"
+  @else if $left == n or $left == none {
+  }
+  @else {
+    left: $left;
+  }
+}

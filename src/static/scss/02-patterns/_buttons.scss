@@ -1,0 +1,25 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Buttons
+////////////////////////////////////////////////////////////////////////////
+*/
+
+button { 
+  appearance: none;  // get rid of "default" iOS button styling for submit buttons
+  box-sizing: border-box;
+  @include button;
+}
+
+.button-disabled {
+	background: tint($color-text, 90%);
+	color: white;
+	&:hover, &:focus {
+		background: tint($color-text, 90%);
+		cursor: default;
+	}
+}
+
+.button-primary {
+    background: $color-link;
+    color: white;	
+}

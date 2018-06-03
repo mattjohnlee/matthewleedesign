@@ -1,0 +1,133 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+From 40 Weeks, so it'll need some TLC
+////////////////////////////////////////////////////////////////////////////
+*/
+
+/* site-wide form styles */
+
+
+/* get rid of "default" iOS button styling for submit buttons */
+input[type=submit] {
+  appearance: none;
+}
+
+*[type="submit"], *.submit {
+  @include button-form;
+  box-sizing: border-box;
+  float: left;
+
+  & + *[type="submit"], & + *.submit {
+    margin-left: 1em;
+  }
+}
+
+.button-disabled {
+  @include button-disabled;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="date"],
+textarea {
+  font-family: $sans;
+  @include small;
+  padding: $form-padding;
+  box-sizing: border-box;
+  color: $color-text--light;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 0;
+  width: 100%;
+  border: 1px solid $color-border;
+  border-radius: 0;
+  outline: none;
+  background: white; 
+  @include animate;
+
+  &:focus {
+    border: 1px solid $color-border;
+  }
+}
+textarea {
+  min-height: 100px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    float: left;
+    margin-right: $form-padding;
+}
+
+form { 
+  position: relative;
+}
+
+label {
+  @include paragraph;
+  @include small;
+  display: block;
+  color: $color-text--light;
+  margin: 0 0 .25rem;
+
+  /* if you want to hide labels semantically 
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+*/
+}
+
+select, input[type="select"] {
+  /*
+  appearance: none;
+  font-size: 1rem;
+  outline: none;
+  padding: .65em 40px .65em 0; 
+  position: relative;
+  border-radius: 0;
+  border: none;
+
+  &:active, &:focus {
+    @include font-regular;
+  } 
+  */
+}
+
+
+.field-container { 
+  margin-bottom: 1.5rem;
+}
+
+fieldset {
+  &.checkboxes {
+    li {
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }
+}
+
+
+/* set input placeholder color to text color */
+
+::-webkit-input-placeholder {
+  color: $color-text--light;
+  vertical-align: top;
+}
+::-moz-placeholder {
+  color: $color-text--light;
+  vertical-align: top;
+}
+:-ms-input-placeholder {
+  color: $color-text--light;
+  vertical-align: top;
+}
+:-moz-placeholder {
+  color: $color-text--light;
+  vertical-align: top;
+}

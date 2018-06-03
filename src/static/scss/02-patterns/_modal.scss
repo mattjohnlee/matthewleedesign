@@ -1,0 +1,35 @@
+.modal-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	visibility: hidden;
+	background-color: transparent;
+	@include animate;
+
+	&.active {
+		visibility: visible;
+		background-color: rgba(0,0,0,.75);
+
+		.modal-window {
+			opacity: 1;
+			transform: translateX(-50%) translateY(-50%) translateZ(0);
+		}
+	}
+}
+
+.modal-window {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-40%) translateZ(0);
+	width: 80%;
+	max-width: 60em;
+	border-radius: 2px;
+	background-color: white;
+	padding: 1em;
+	opacity: 0;
+	@include animate;
+}

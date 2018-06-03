@@ -1,0 +1,22 @@
+.pagination {
+  list-style: none;
+  float: left;
+  padding-top: 2em;
+  li {
+    @include font-bold;
+    @include smallcaps;
+    float: left;
+    margin: 0 .25em 0 0;
+
+    a {
+      border: none;
+      padding: .5em .65em .5em .75em;
+    }
+
+    &.current_page {
+      a {
+        border-bottom: 1px solid;     
+      }
+    }
+  }
+}

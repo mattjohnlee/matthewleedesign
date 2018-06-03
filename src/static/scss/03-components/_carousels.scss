@@ -1,0 +1,29 @@
+.doctors-carousel, .services-carousel, .pet-carousel {
+	.doctor-unit, .service-unit, .pet-unit {
+		@include column(6);
+		@include last-col2;
+		margin-bottom: $grid-padding;
+	
+		@include mq($s) {
+			@include column(4);
+			@include last-col3;
+		}
+	
+		@include mq($m) {
+			@include column(3);
+			@include last-col4;
+		}
+
+		@include mq($l) {
+			@include column(2);
+			@include last-col6;
+		}
+	}
+}
+
+.homepage-carousel {
+	display: none;
+	@include mq($m) {
+		display: block;
+	}
+}

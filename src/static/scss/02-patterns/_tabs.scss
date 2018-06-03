@@ -1,0 +1,40 @@
+// Tabs
+// -------------------------
+
+.tabs {
+  border-bottom: 1px solid $color-text;
+  list-style: none;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: -1px; // Make the list-items overlay the bottom border
+
+    a {
+      margin-right: .125em;
+      display: block;
+      border: 1px solid transparent;
+      padding: .25em 1em;
+
+      &:hover, &:focus {
+        background-color: tint($color-text, 95%);
+        text-decoration: none;
+        border-bottom: 1px solid $color-text;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active a {
+      color: $color-text;
+      &,
+      &:hover,
+      &:focus {
+        background-color: white;
+        border: 1px solid $color-text;
+        border-bottom-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+// Loosely based on 960.gs //
+// The Bearded Grid System: https://github.com/elefontpress/rwd-grid-example
+// Gemified version: https://rubygems.org/gems/bearded_grid | https://github.com/beardedstudio/bearded_grid
+
+$gutter-width: 2%;
+$columns: 12;
+$column-width: 6.5%;
+$grid-padding: 2%;
+$grid-width: ((($column-width+($gutter-width))*$columns)-$gutter-width);
+
+// A 16-column version of the grid:
+
+// $gutter-width: 4%;
+// $columns: 16;
+// $column-width: 2.5%;
+// $grid-width: ((($column-width+($gutter-width))*$columns)-$gutter-width);
+
+@mixin container($max-width: 81.25em) {
+  width: $grid-width;
+  margin: auto;
+  max-width: $max-width;
+  *zoom: 1;
+}
+@mixin container-padded($max-width: 81.25em) {
+  width: (($grid-width)-($grid-padding*2));
+  padding: 0 $grid-padding;
+  margin: auto;
+  max-width: $max-width;
+  *zoom: 1;
+}
+
+@function column_width($num) {
+  @return ($num * $column-width) + (($num - 1) * ($gutter-width));
+}
+
+@mixin column($num) {
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: column_width($num);
+  margin-right: $gutter-width;
+  margin-left: 0;
+}
+
+@mixin prepend($num) {
+  margin-left: column_width($num) + ($gutter-width * 1);
+}
+
+@mixin append($num) {
+  margin-right: column_width($num) + ($gutter-width * 1);
+}
+
+@mixin last {
+  margin-right: 0;
+}
+
+@mixin last-col2 {
+  &:nth-of-type(1n) {
+    margin-right: $gutter-width;
+    .lt-ie8 & {
+      margin-right: $gutter-width - 0.25%;
+    }
+    float: left;
+    clear: none;
+  }
+  &:nth-of-type(2n+2) {
+    @include last;
+    float: right;
+  }
+  &:nth-of-type(2n+3) {
+    clear: both;
+  }
+}
+
+@mixin last-col3 {
+  &:nth-of-type(1n) {
+    margin-right: $gutter-width;
+    .lt-ie8 & {
+      margin-right: $gutter-width - 0.25%;
+    }
+    float: left;
+    clear: none;
+  }
+  &:nth-of-type(3n+3) {
+    @include last;
+    float: right;
+  }
+  &:nth-of-type(3n+4) {
+    clear: both;
+  }
+}
+
+@mixin last-col4 {
+  &:nth-of-type(1n) {
+    margin-right: $gutter-width;
+    .lt-ie8 & {
+      margin-right: $gutter-width - 0.25%;
+    }
+    float: left;
+    clear: none;
+  }
+  &:nth-of-type(4n+4) {
+    @include last;
+    float: right;
+  }
+  &:nth-of-type(4n+5) {
+    clear: both;
+  }
+}
+
+@mixin last-col6 {
+  &:nth-of-type(1n) {
+    margin-right: $gutter-width;
+    .lt-ie8 & {
+      margin-right: $gutter-width - 0.25%;
+    }
+    float: left;
+    clear: none;
+  }
+  &:nth-of-type(6n+6) {
+    @include last;
+    float: right;
+  }
+  &:nth-of-type(6n+7) {
+    clear: both;
+  }
+}
+
+@mixin mobile-grid {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}

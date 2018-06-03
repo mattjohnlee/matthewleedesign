@@ -1,0 +1,68 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Error/Valid Messages (defaults are kinda messy...need to tidy up)
+////////////////////////////////////////////////////////////////////////////
+*/
+
+/* Alert boxes */
+
+
+@mixin alert-variant($alert-color) {
+  background-color: tint($alert-color, 85%);
+  border-color: $alert-color;
+  color: $alert-color;
+}
+
+.alert {
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid transparent;
+
+  // Improve alignment and spacing of inner content
+  > p, > ul {
+    margin-bottom: 0;
+  }
+
+  > p + p {
+    margin-top: .5em;
+  }
+}
+
+.alert-success {
+  @include alert-variant($color-green);
+}
+
+.alert-info {
+  @include alert-variant($color-gray-0);
+}
+
+.alert-warning {
+  @include alert-variant($color-red);
+}
+
+
+/* Form notifications */
+
+label {
+  &.valid {
+    color: $color-valid;
+    font-weight: bold;
+  }
+
+  &.error {
+    color: $color-error;
+    font-weight: bold;
+  }
+}
+
+input {
+  &.is-valid {
+    border: 1px solid $color-valid;
+    background: lighten($color-valid, 70%); 
+  }
+
+  &.is-error {
+    border: 1px solid $color-error;
+    background: tint($color-error, 90%); 
+  }
+}

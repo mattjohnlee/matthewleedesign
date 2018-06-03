@@ -1,0 +1,52 @@
+/* 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+In this file you should centralize your imports
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+/* 00 -- resets: pick one or the other, Reset or Normalize. For more info: https://the-pastry-box-project.net/oli-studholme/2013-june-3 */
+@import "01-base/reset";
+//@import "01-core/normalize";
+
+
+/* 01 -- base components: variables, mixins, grids, fonts, media queries, etc. */
+@import "01-base/variables";
+@import "01-base/grid";
+@import "01-base/fonts";
+@import "01-base/functions";
+@import "01-base/mixins--general";
+@import "01-base/mixins--typography";
+@import "01-base/mixins--layout";
+ 
+
+/* 02 -- styleguide-level patterns: typography, images, figures, forms, tags, notifications, etc. */
+@import "02-patterns/animations";
+@import "02-patterns/breadcrumbs";
+@import "02-patterns/buttons";
+@import "02-patterns/forms";
+@import "02-patterns/links";
+@import "02-patterns/media";
+@import "02-patterns/modal";
+@import "02-patterns/notifications";
+@import "02-patterns/pagination";
+@import "02-patterns/tables";
+@import "02-patterns/tabs";
+@import "02-patterns/tags";
+@import "02-patterns/toggle";
+@import "02-patterns/typography";
+
+
+/* 03 -- individual components reused throughout multiple layouts: header, footer, navigation, sidebars, carousels, etc. */
+@import "03-components/header";
+@import "03-components/footer";
+@import "03-components/carousels";
+@import "03-components/navigation";
+@import "03-components/social-media";
+
+
+/* 04 -- idividual page layouts, including global styles */
+@import "04-pages/global";
+
+
+/* 05 -- individual third-party components */
+@import "05-vendor/prism";

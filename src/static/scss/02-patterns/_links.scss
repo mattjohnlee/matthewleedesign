@@ -1,0 +1,25 @@
+a {
+  @include link;
+
+  &.button-link {
+    @include button;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+a[href$=".pdf"] { 
+  &:before {
+    content: "\f1c1"; 
+    font-family: FontAwesome;
+    padding-right: 0.5em;
+  }
+}
+
+a[href$=".doc"] { 
+  &:before {
+    content: "\f1c2"; 
+    font-family: FontAwesome;
+    padding-right: 0.5em;
+  }
+}

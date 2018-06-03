@@ -1,0 +1,49 @@
+.primary {
+	.toggle-list {
+		> li {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.toggle-trigger {
+	position: relative;
+	padding: 1em 2em;
+	background-color: $color-gray-6;
+
+	&:before {
+		content: '+';
+		position: absolute;
+		left: .75em;
+	}
+
+	&:hover {
+		cursor: pointer;
+		> * {
+			color: $color-link--active;
+		}
+	}
+
+	&.active:before {
+		content: '–';
+	}		
+
+	p {
+		margin: 0;
+	}
+
+	h2, h4, h4 {
+		@include animate;
+		margin-bottom: 0; /* prevents funny bounce on toggle */
+	}
+}
+
+.toggle-target {
+	display: none;
+	padding: 1em 2em;
+	background-color: $color-gray-9;
+
+	> * {
+		//margin: 0;
+	}
+}	

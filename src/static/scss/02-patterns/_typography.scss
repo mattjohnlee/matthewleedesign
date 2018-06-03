@@ -1,0 +1,127 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Headings
+////////////////////////////////////////////////////////////////////////////
+*/
+
+
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+h4 {
+  @include heading-4;
+}
+
+h5 {
+  @include heading-5;
+}
+
+h6 {
+  @include heading-6;
+}
+
+.divider-bottom {
+  @include divider-bottom;
+}
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Block-level Elements
+////////////////////////////////////////////////////////////////////////////
+*/
+
+
+p {
+  @include paragraph;
+  margin-bottom: 1em;
+}
+
+ul, ol {
+  li {
+  margin-bottom: 1em;
+  }
+}
+
+li {
+  @include li;
+}
+
+ul {
+  list-style: disc;
+  margin: 0 0 1em 1.5em;
+}
+
+ol {
+  list-style: decimal;
+  margin: 0 0 1em 1.5em;
+}
+
+.pullquote {
+  font-size: .75em;
+  font-weight: 200;
+  font-style: italic;
+  margin: 1em 2em;
+  padding: 0 2em;
+  border-left: 2px solid $color-border;
+}
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Inline Elements
+////////////////////////////////////////////////////////////////////////////
+*/
+
+
+strong, b {
+  @include font-bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+.font-bolditalic {
+  @include font-bolditalic;
+}
+
+.font-heading {
+  @include font-heading;
+}
+
+.font-headingitalic {
+  @include font-headingitalic;
+}
+
+.font-fallback {
+  @include font-fallback;
+}
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Special Formatting
+////////////////////////////////////////////////////////////////////////////
+*/
+ small {
+  @include small;
+ }
+
+ .smallcaps {
+  @include smallcaps;
+ }
+
+.caps {
+  @include caps;
+}

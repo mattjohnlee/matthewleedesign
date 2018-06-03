@@ -1,0 +1,42 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Animate all properties
+////////////////////////////////////////////////////////////////////////////
+*/
+
+@mixin animate {
+  transition-property: all;
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin animate-slow {
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin animate-fast {
+  transition-property: all;
+  transition-duration: .125s;
+  transition-timing-function: ease-in-out;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Animate specific properties
+////////////////////////////////////////////////////////////////////////////
+*/
+
+@mixin animate-opacity {
+	transition: opacity, 0.3s, ease-out;
+}
+
+@mixin animate-color {
+	transition: color, 0.3s, ease-out;
+	transition: background-color, 0.3s, ease-out;
+}
+
+@mixin animate-move {
+	transition: all, 0.3s, ease-in-out;
+}

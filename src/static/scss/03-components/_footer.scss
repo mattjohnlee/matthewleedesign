@@ -1,0 +1,19 @@
+footer {
+	ul, ol { //clear styling from nav-based lists
+		@include ul-null;
+	}
+
+	@include clearfix;
+	clear: both;
+	background-color: $color-background--tint;
+
+	p, li {
+		margin-bottom: 0;
+		@include small;
+	}
+}
+
+.copyright {
+	padding: 2em;
+	float: right;
+}
