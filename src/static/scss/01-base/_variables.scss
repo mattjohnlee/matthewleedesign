@@ -1,5 +1,5 @@
 
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Gray values
 ////////////////////////////////////////////////////////////////////////////
@@ -22,21 +22,21 @@ $color-white: $color-gray-f;
 $color-gray: $color-gray-5;
 
 
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Color values -- primary
 ////////////////////////////////////////////////////////////////////////////
 */
 
-$color-red: red;
+$color-red: #ff6f3a;
 $color-orange: orange;
 $color-yellow: yellow;
 $color-green: green;
-$color-blue: blue;
+$color-blue: #3269ff;
 $color-indigo: indigo;
 $color-violet: violet;
 
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Standard applications of color variables
 ////////////////////////////////////////////////////////////////////////////
@@ -51,7 +51,7 @@ $color-text: $color-base;
 $color-text--light: lighten($color-text, 30%);
 $color-text--invert: $color-white;
 
-$color-heading: $color-text;
+$color-heading: $color-blue;
 $color-caption: $color-text--light;
 
 $color-link: $color-blue;
@@ -72,39 +72,39 @@ $color-border: $color-gray-8;
 
 
 
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Typographic variables
 ////////////////////////////////////////////////////////////////////////////
 */
 
 $font-family-sans: Helvetica, Arial, sans-serif;
-$font-family-serif: Georgia, 'Times New Roman', serif;
-$font-family-display: $font-family-sans;
-$font-family-monospace: Courier, monospace;
+$font-family-serif: 'Lora', Georgia, 'Times New Roman', serif;
+$font-family-display: $font-family-serif;
+$font-family-monospace: 'Space Mono', Courier, monospace;
 
 $sans: $font-family-sans;
 $serif: $font-family-serif;
-$display: $font-family-display;
+$display: $font-family-serif;
 $mono: $font-family-monospace;
 
-$font-family-base: $font-family-sans;
-$font-family-heading: $font-family-sans;
+$font-family-base: $font-family-monospace;
+$font-family-heading: $font-family-display;
 
 
-$font-size-base: 1rem;
+$font-size-base: 1.2rem;
 $font-size-small: .8rem;
-$font-size-h1: 2.75rem; 
-$font-size-h2: 2.25rem; 
-$font-size-h3: 1.5rem; 
-$font-size-h4: 1.2rem; 
-$font-size-h5: 1rem; 
-$font-size-h6: .8rem; 
+$font-size-h1: 2.75rem;
+$font-size-h2: 2.25rem;
+$font-size-h3: 1.5rem;
+$font-size-h4: 1.2rem;
+$font-size-h5: 1rem;
+$font-size-h6: .8rem;
 $font-size-p: $font-size-base;
 $font-size-caption: $font-size-small;
 
 
-$line-height-base: 1.5;
+$line-height-base: 1.9;
 $line-height-small: 1.2;
 $line-height-body: $line-height-base;
 $line-height-p: $line-height-base;
@@ -116,30 +116,30 @@ $font-weight-light: 200;
 
 
 
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Layout/spacing variables
 ////////////////////////////////////////////////////////////////////////////
 */
 
-$spacing-xxs: .25rem;
-$spacing-xs: .5rem;
-$spacing-sm: .75rem;
-$spacing-md: 1rem;
-$spacing-lg: 1.5rem;
-$spacing-xl: 2rem;
-$spacing-xxl: 3rem;
+$spacing-xxs: .5rem;
+$spacing-xs: .75rem;
+$spacing-sm: .1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 2.5rem;
+$spacing-xxl: 4rem;
 
 $spacing-section: $spacing-xl;
 $form-padding: $spacing-sm;
 
-$font-margin--body-text: 0 0 $spacing-md;
-$font-margin--heading-text: 0 0 $spacing-xs;
+$font-margin--body-text: 0 0 $spacing-lg;
+$font-margin--heading-text: 0 0 $spacing-xl;
 
 
 
 
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Breakpoints
 ////////////////////////////////////////////////////////////////////////////
@@ -156,7 +156,7 @@ $container-max-width: 1170px;
 
 
 
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 z-index
 ////////////////////////////////////////////////////////////////////////////

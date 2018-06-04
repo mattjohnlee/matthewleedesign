@@ -1,5 +1,5 @@
 
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Styles not specific to any particular site page. Place things like "general" paragraph styles, heading styles, base list styles, etc. here.
 
@@ -28,12 +28,12 @@ body {
 }
 
 ::selection {
-  background: $color-selection-bg; 
+  background: $color-selection-bg;
   color: $color-selection-text;
 }
 
 ::-moz-selection { /* Firefox */
-  background: $color-selection-bg; 
+  background: $color-selection-bg;
   color: $color-selection-text;
 }
 
@@ -42,6 +42,13 @@ body {
 
 .container {
   @include container;
+}
+
+s {
+  text-decoration: line-through;
+  text-decoration-style: wavy;
+  text-decoration-color: $color-red;
+  margin: 0 .5rem 0 0;
 }
 
 hr {
@@ -53,14 +60,14 @@ hr {
 .primary {
   margin-bottom: $spacing-section;
   clear: both;
-  @include column(12);    
+  @include column(12);
 
   @include mq($m) {
-    @include column(8);    
+    @include column(8);
   }
 
   @include mq($l) {
-    @include column(9);    
+    @include column(9);
   }
 
   ul, ol {
