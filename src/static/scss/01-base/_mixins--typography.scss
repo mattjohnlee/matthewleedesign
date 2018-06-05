@@ -50,10 +50,31 @@ Block-level typographic elements
 @mixin link {
   color: $color-link;
   text-decoration: none;
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    height: 10%;
+    background-color: $color-link--active;
+    @include animate-fast;
+  }
 
   &:hover, &:focus {
-    color: $color-link--active;
-    text-decoration: underline;
+    &:after {
+      height: 25%;
+      z-index: -1;
+    }
+  }
+}
+
+@mixin link-null {
+  &:after {
+    display: none;
   }
 }
 
@@ -64,9 +85,9 @@ Block-level typographic elements
   line-height: $line-height-base;
   margin: $font-margin--body-text;
 
-  a {
-    @include link;
-  }
+  // a {
+  //   @include link;
+  // }
 }
 
 @mixin heading-text {
