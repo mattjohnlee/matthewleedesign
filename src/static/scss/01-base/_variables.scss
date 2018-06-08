@@ -28,12 +28,12 @@ Color values -- primary
 ////////////////////////////////////////////////////////////////////////////
 */
 
-$color-red: #f98420;
+$color-red: hsla(30, 100%, 55%, 1);
 $color-orange: orange;
 $color-yellow: yellow;
-$color-green: #e0ea3d;
-$color-blue: #3226e8;
-$color-indigo: indigo;
+$color-green: hsla(70, 80%, 70%, 1);
+$color-blue: hsla(232, 65%, 54%, 1);
+$color-indigo: #3226e8;
 $color-violet: violet;
 $color-offwhite: #ececec;
 
@@ -45,7 +45,7 @@ Standard applications of color variables
 
 $color-base: $color-black;
 
-$color-background: $color-offwhite;
+$color-background: $color-white;
 $color-background--tint: lighten($color-base, 50%);
 
 $color-text: $color-base;
