@@ -1,4 +1,4 @@
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 In this file you should centralize your imports
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -17,7 +17,7 @@ In this file you should centralize your imports
 @import "01-base/mixins--general";
 @import "01-base/mixins--typography";
 @import "01-base/mixins--layout";
- 
+
 
 /* 02 -- styleguide-level patterns: typography, images, figures, forms, tags, notifications, etc. */
 @import "02-patterns/animations";
@@ -46,6 +46,7 @@ In this file you should centralize your imports
 
 /* 04 -- idividual page layouts, including global styles */
 @import "04-pages/global";
+@import "04-pages/homepage";
 
 
 /* 05 -- individual third-party components */
