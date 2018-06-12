@@ -1,28 +1,28 @@
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Animate all properties
 ////////////////////////////////////////////////////////////////////////////
 */
 
-@mixin animate {
-  transition-property: all;
+@mixin animate($property: all) {
+  transition-property: $property;
   transition-duration: .25s;
   transition-timing-function: ease-in-out;
 }
 
-@mixin animate-slow {
-  transition-property: all;
+@mixin animate-slow($property: all) {
+  transition-property: $property;
   transition-duration: .5s;
   transition-timing-function: ease-in-out;
 }
 
-@mixin animate-fast {
-  transition-property: all;
+@mixin animate-fast($property: all) {
+  transition-property: $property;
   transition-duration: .125s;
   transition-timing-function: ease-in-out;
 }
 
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Animate specific properties
 ////////////////////////////////////////////////////////////////////////////

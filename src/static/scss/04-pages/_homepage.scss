@@ -1,3 +1,6 @@
+.hp__intro {
+  margin-top: $spacing-xxl*2;
+}
 
 .hp__interest-h {
   font-size: inherit;
@@ -11,13 +14,13 @@
   max-width: 50vw;
   left: 50%;
   top: 50%;
-  transform: translate3d(-50%, -110%, 0);
+  transform: translate3d(-8%, -105%, 0);
   // display: none;
   opacity: 0;
   // z-index: -1;
   pointer-events: none;
-  @include animate-fast;
-  box-shadow: 0 0 15px rgba(0,0,0,.15);
+  @include animate-fast(opacity);
+  // box-shadow: 0 0 15px rgba(0,0,0,.15);
 
   .show-image & {
     // display: block;
@@ -25,3 +28,31 @@
   }
 }
 
+.projects {
+  @include container(100%);
+  margin: 0;
+}
+
+.project-list {
+  @include ul-null;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: $border-thin;
+  padding: $spacing-md $grid-padding*2;
+  margin-bottom: 0;
+  @include animate-fast;
+
+  &:hover, &:focus {
+    background-color: $color-selection-bg;
+  }
+
+  > * {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}

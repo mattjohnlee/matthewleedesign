@@ -4,10 +4,14 @@ title: Matthew Lee Design
 {% extends "layouts/base.twig" %}
 
 {% block content %}
+  <div class="hp__intro">
+    <div class="container">
+      <h2>Why, hello there.</h2>
+      <h2>I’m Matt, a <s>designer</s> <s>web designer</s> <s>front-end developer</s> <s>front-end designer</s> <s>UI/UX developer</s> <s>anything but React</s> <s>gfe!bfa&uh!jk@hj&3&hg*</s></h2>
+      <h2>Let’s just go with “designer.”</h2>
+    </div>
+  </div>
   <div class="container">
-    <h2>Why, hello there.</h2>
-    <h2>I’m Matt, a <s>designer</s> <s>web designer</s> <s>front-end developer</s> <s>front-end designer</s> <s>UI/UX developer</s> <s>anything but React</s> <s>gfe!bfa&uh!jk@hj&3&hg*</s></h2>
-    <h2>Let’s just go with “designer.”</h2>
 
     <p>I’m a happy generalist who does a lot of designing through code. With a background ranging from <a href="http://www.landesbergdesign.com">print design</a> to <a href="http://www.maya.com">user experience</a> to <a href="http://www.cgpartnersllc.com">front-end development</a>, I now spend most of my time building digital publications and online editorial experiences. Whether my medium is a printed page or a smartphone, I aim to design things that people will love to read.</p>
 
@@ -20,7 +24,26 @@ title: Matthew Lee Design
         <img data-src="/static/img/screenshot-trace.png" class="hp__interests-hover-image js-hp-hover-img" alt="alt">
       </span> -->
 
+  </div>
 
-
+  <div class="projects">
+    <h2>For Example</h2>
+    <ul class="project-list">
+      <!-- Trace -->
+      <li class="project hp__interest-item js-interest-item">
+        <h3 class="project-name hp__interest-h"><a href="https://www.thetrace.org">The Trace</a></h3>
+        <p class="project-description">Non-profit news reporting on America’s gun violence crisis</p>
+        <p class="project-date">2016 – present</p>
+        <img data-src="/static/img/screenshot-trace.png" class="hp__interests-hover-image js-hp-hover-img" alt="alt">
+       <!--  <video class="hp__interests-hover-image js-hp-hover-img" autoplay preload muted loop><source src="/static/img/trace.mp4" type="video/mp4"></video> -->
+        </li>
+      <!-- Trace -->
+      <li class="project hp__interest-item js-interest-item">
+        <h3 class="project-name hp__interest-h"><a href="https://www.thetrace.org">Punch</a></h3>
+        <p class="project-description">Basically The New Yorker of the beer, wine, and cocktail world</p>
+        <p class="project-date">2016 – 2017</p>
+        <img data-src="/static/img/screenshot-punch.png" class="hp__interests-hover-image js-hp-hover-img" alt="alt">
+        </li>
+    </ul>
   </div>
 {% endblock %}
