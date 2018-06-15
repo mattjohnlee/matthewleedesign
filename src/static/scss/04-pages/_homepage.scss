@@ -1,5 +1,7 @@
-.hp__intro {
+.hp-top {
+  @include container-padded;
   margin-top: $spacing-xxl*2;
+  display: flex;
 }
 
 .hp__interest-h {
@@ -25,7 +27,7 @@
 }
 
 .for-example {
-  @include container;
+  @include container-padded;
   @include smallcaps;
   font-weight: bold;
   margin-top: $spacing-lg;
@@ -33,7 +35,7 @@
 }
 
 .projects {
-  @include container(100%);
+  @include container;
   margin: 0;
 }
 

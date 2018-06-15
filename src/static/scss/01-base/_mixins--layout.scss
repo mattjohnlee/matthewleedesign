@@ -10,16 +10,17 @@
 
 
 
-@mixin container($maxwidth: 55rem) {
+@mixin container($maxwidth: none) {
   position: relative;
-  margin: 0 auto 0 $grid-padding*2;
+  margin: 0 auto;
   max-width: $maxwidth;
   @include clearfix;
-  clear: both;
 }
 
-
-
+@mixin container-padded {
+  @include container;
+  padding: 0 $grid-padding*2;
+}
 
 @mixin divider-top($border-weight:1px, $spacing:1em, $color-border:auto) {
   padding-top: $spacing/2;
