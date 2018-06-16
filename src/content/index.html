@@ -29,31 +29,29 @@ title: Matthew Lee Design
 <section class="hp-bottom">
   <div class="projects">
     <h2 class="for-example">For Example</h2>
+
+    {% set projects = data.projects %}
+
     <ul class="project-list">
-      <!-- Trace
+    {% for project in projects %}
       <li class="project hp__interest-item js-interest-item">
-        <h3 class="project-name hp__interest-h"><a href="https://www.thetrace.org">The Trace</a></h3>
-        <p class="project-description">Non-profit news reporting on America’s gun violence crisis</p>
-        <p class="project-date">2016 – present</p>
-        <img data-src="/static/img/screenshot-trace.png" class="hp__interests-hover-image js-hp-hover-img" alt="alt">
-        </li> -->
-      <!-- Punch -->
-      <li class="project hp__interest-item js-interest-item">
-        <a href="https://www.punchdrink.com" class="project-link">
+        <a href="{{project.url}}" class="project-link">
           <div class="project-intro">
-            <h3 class="project-name hp__interest-h">Punch</h3>
-            <p class="project-date">2016 – 2017</p>
+            <h3 class="project-name hp__interest-h">{{project.title}}</h3>
+            <p class="project-date">{{project.date.start}}{% if project.date.start != project.date.end %} – {{project.date.end}}{% endif %}</p>
           </div>
           <div class="project-description">
-            <p>Cocktail recipes. Travel guides. Long-form essays about drink culture and history. Basically The New Yorker of the beer, wine, and cocktail world.</p>
+            <p>{{project.description}}</p>
           </div>
-          <ul class="project-responsibilities">
-            <li>design</li>
-            <li>front-end development</li>
-          </ul>
-          <img data-src="/static/img/screenshot-punch.png" class="hp__interests-hover-image js-hp-hover-img" alt="alt">
+          {# <ul class="project-responsibilities">
+          {% for item in project.responsibilities %}
+            <li>{{item}}</li>
+          {% endfor %}
+          </ul> #}
+          <img data-src="/static/img/screenshot-{{project.abbr}}.png" class="hp__interests-hover-image js-hp-hover-img" alt="Screenshot of {{project.title}}">
         </a>
-        </li>
+      </li>
+    {% endfor %}
     </ul>
   </div>
 </section>

@@ -1,0 +1,118 @@
+[
+  {
+    "title": "The Trace",
+    "abbr": "trace",
+    "url": "http://www.thetrace.org",
+    "date": {
+      "start": "2016",
+      "end": "present"
+    },
+    "description": "An independent, nonpartisan, nonprofit newsroom dedicated to shining a light on America’s gun violence crisis.",
+    "responsibilities": [
+      "design",
+      "front-end development",
+      "WordPress"
+    ]
+  },
+  {
+    "title": "Christopher Kimball’s Milk Street",
+    "abbr": "milkstreet",
+    "url": "http://www.177milkstreet.com",
+    "date": {
+      "start": "2017",
+      "end": "present"
+    },
+    "description": "The lastest culinary media project from Chris Kimball, the founder of Cook’s Illustrated and America’s Test Kitchen.",
+    "responsibilities": [
+      "design",
+      "front-end development",
+      "Craft CMS"
+    ]
+  },
+  {
+    "title": "Contemporary Art Museum St. Louis",
+    "abbr": "cam",
+    "url": "http://www.camstl.org",
+    "date": {
+      "start": "2017",
+      "end": "2018"
+    },
+    "description": "A new custom WordPress site for an innovative and active arts center, built in collaboration with Zak Greene and Dome Collective.",
+    "responsibilities": [
+      "front-end development",
+      "WordPress"
+    ]
+  },
+  {
+    "title": "Punch",
+    "abbr": "punch",
+    "url": "http://www.punchdrink.com",
+    "date": {
+      "start": "2016",
+      "end": "2017"
+    },
+    "description": "Cocktail recipes. Travel guides. Long-form essays about drink culture and history. Basically The New Yorker of the beer, wine, and cocktail world.",
+    "responsibilities": [
+      "design",
+      "front-end development",
+      "WordPress"
+    ]
+  },
+  {
+    "title": "WBUR",
+    "abbr": "wbur",
+    "url": "http://www.wbur.org",
+    "date": {
+      "start": "2016",
+      "end": "2017"
+    },
+    "description": "Boston’s largest NPR station and a producer of some of the country’s most iconic public radio shows.",
+    "responsibilities": [
+      "design",
+      "front-end development"
+    ]
+  },
+  {
+    "title": "Taste",
+    "abbr": "taste",
+    "url": "http://www.tastecooking.com",
+    "date": {
+      "start": "2016",
+      "end": "2016"
+    },
+    "description": "A playful new home for food essays, recipes, and kitchen inspiration from Penguin Random House, the world’s largest publisher of cookbooks.",
+    "responsibilities": [
+      "design",
+      "front-end development",
+      "WordPress"
+    ]
+  },
+  {
+    "title": "Center for Curatorial Leadership",
+    "abbr": "ccl",
+    "url": "http://www.curatorialleadership.org",
+    "date": {
+      "start": "2015",
+      "end": "2015"
+    },
+    "description": "A transformative training program for curators of many of the world’s great museums, from the Guggenheim to the Louvre.",
+    "responsibilities": [
+      "front-end development",
+      "Django"
+    ]
+  },
+  {
+    "title": "Strada",
+    "abbr": "strada",
+    "url": "http://www.stradallc.com",
+    "date": {
+      "start": "2014",
+      "end": "2014"
+    },
+    "description": "A cross-disciplinary firm that blends architecture, interior design, and landscape architecture, Strada creates the most innovative spaces in Pittsburgh and Philadelphia.",
+    "responsibilities": [
+      "design",
+      "front-end development"
+    ]
+  }
+]
