@@ -1,24 +1,46 @@
+$header-height: 60px;
+
 header {
-	position: fixed;
+  padding-left: $homepage-margin-top;
 	width: 100%;
+  height: $header-height;
 	top: 0;
-	z-index: 1;
-	padding: $grid-padding/2 $grid-padding*2;
-	background-color: $color-link;
+	z-index: -1;
+	// background-color: $color-gray-light;
+  background-color: $color-link--active;
 	color: $color-white;
 	margin-bottom: $spacing-lg;
-
-	a {
-		color: $color-white;
-		@include link-null;
-	}
+  display: flex;
+  align-items: center;
 
 	ul, ol { //clear styling from nav-based lists
 		@include ul-null;
 	}
+
+  @include mq($bp-nav) {
+    position: fixed;
+    transform: rotate(90deg);
+    transform-origin: 0 100%;
+    top: -$header-height;
+  }
 }
 
 .header-logo {
 	@include paragraph;
+  font-size: $font-size-small;
 	margin-bottom: 0;
+
+  a {
+    color: $color-base;
+    @include link-null;
+    display: block;
+    // padding: $grid-padding/2 $grid-padding*2;
+    @include animate-fast;
+
+    &:hover, &:focus {
+      background-color: $color-link;
+      color: $color-white;
+    }
+  }
+
 }

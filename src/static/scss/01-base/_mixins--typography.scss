@@ -146,6 +146,11 @@ Stylistic applications
 ////////////////////////////////////////////////////////////////////////////
 */
 
+@mixin fluid-headline {
+  @include fluid-font-size(24px $sm, 40px $xl);
+}
+
+
 @mixin ul-null {
   list-style: none;
   margin: 0;

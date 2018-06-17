@@ -17,7 +17,7 @@ $color-gray-8: tint($color-gray-0, 80%);
 $color-gray-9: tint($color-gray-0, 90%);
 $color-gray-f: #ffffff;
 
-$color-black: #4e4547;
+$color-black: hsla(347,6,29,1);
 $color-white: $color-gray-f;
 $color-gray: $color-gray-5;
 
@@ -28,13 +28,13 @@ Color values -- primary
 ////////////////////////////////////////////////////////////////////////////
 */
 
-$color-red: hsla(30, 100%, 55%, 1);
-$color-orange: orange;
-$color-yellow: yellow;
-$color-green: hsla(70, 80%, 70%, 1);
-$color-blue: hsla(232, 65%, 54%, 1);
+$color-red: hsla(30, 100, 55, 1);
+$color-yellow: hsla(65,100,57,1);
+$color-green: hsla(70, 80, 70, 1);
+$color-blue: hsla(232, 65, 54, 1);
 $color-indigo: #3226e8;
-$color-violet: violet;
+
+$color-gray-light: hsla(225,11,93,1);
 $color-offwhite: #ececec;
 
 /*
@@ -56,10 +56,12 @@ $color-heading: $color-blue;
 $color-caption: $color-text--light;
 
 $color-link: $color-blue;
-$color-link--active: $color-green;
+$color-link--active: $color-yellow;
 
-$color-selection-bg: rgba($color-link,.2);
+$color-selection-bg: rgba($color-link,.1);
 $color-selection-text: $color-text;
+
+$color-highlight-red: rgba($color-red,.1);
 
 $color-error: $color-red;
 $color-valid: $color-green;
@@ -68,7 +70,7 @@ $color-button: $color-link;
 $color-button--active: $color-link--active;
 $color-button-text: $color-text--invert;
 
-$color-border: $color-gray-8;
+$color-border: rgba($color-base, .15);
 
 
 
@@ -131,6 +133,13 @@ $spacing-lg: 2rem;
 $spacing-xl: 2.5rem;
 $spacing-xxl: 4rem;
 
+$gutter-width: 2%;
+$columns: 12;
+$column-width: 6.5%;
+$grid-padding: 2%;
+$grid-width: ((($column-width+($gutter-width))*$columns)-$gutter-width);
+
+
 $spacing-section: $spacing-xl;
 $form-padding: $spacing-sm;
 
@@ -140,6 +149,8 @@ $font-margin--heading-text: 0 0 $spacing-xl;
 $border-thin: 1px solid $color-border;
 $border-thick: 3px solid $color-border;
 
+$homepage-margin-top: $grid-padding*3;
+
 /*
 ////////////////////////////////////////////////////////////////////////////
 Breakpoints
@@ -147,15 +158,15 @@ Breakpoints
 */
 
 
-$s: 600px;
-$m: 768px;
-$l: 1024px;
-$l2: 1200px;
-$xl: 1400px;
-$nav-breakpoint: $l;
-$container-max-width: 1170px;
+$xxs:   375px;
+$xs:    450px;
+$sm:    600px;
+$md:    768px;
+$lg:    960px;
+$xl:    1200px;
+$xxl:   1400px;
 
-
+$bp-nav: $lg;
 
 /*
 ////////////////////////////////////////////////////////////////////////////

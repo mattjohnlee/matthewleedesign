@@ -4,14 +4,30 @@ Color functions -- making up for Compass
 ////////////////////////////////////////////////////////////////////////////
 */
 
-// Slightly lighten a color
-@function tint($color, $percentage) {
-  @return mix($color, white, 100%-$percentage);
+// Convert simple "a" to "auto" for shorthander mixin
+// @param {Value} $value - Checks for "a", replaces with "auto" otherwise returns value.
+// @link http://codepen.io/upstatement/pen/eNoMQe See it on Codepen >
+
+@function auto($value) {
+  @if $value == "a" {
+    @return auto;
+  } @else {
+    @return $value;
+  }
 }
 
-// Slightly darken a color
-@function shade($color, $percentage) {
-  @return mix($color, black, 100%-$percentage);
+// Removing the unit from a number and returning the raw value.
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Mix a color with black.
+@function shade($color, $percent) {
+  @return mix(#000, $color, $percent);
 }
 
 
+// Mix a color with white.
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
+}

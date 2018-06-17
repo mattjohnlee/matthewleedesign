@@ -12,7 +12,8 @@
       "design",
       "front-end development",
       "WordPress"
-    ]
+    ],
+    "published": "true"
   },
   {
     "title": "Christopher Kimball’s Milk Street",
@@ -27,7 +28,8 @@
       "design",
       "front-end development",
       "Craft CMS"
-    ]
+    ],
+    "published": "true"
   },
   {
     "title": "Contemporary Art Museum St. Louis",
@@ -37,11 +39,12 @@
       "start": "2017",
       "end": "2018"
     },
-    "description": "A new custom WordPress site for an innovative and active arts center, built in collaboration with Zak Greene and Dome Collective.",
+    "description": "A custom WordPress site for a dynamic and innovative arts center, built in collaboration with Zak Greene and Dome Collective.",
     "responsibilities": [
       "front-end development",
       "WordPress"
-    ]
+    ],
+    "published": "true"
   },
   {
     "title": "Punch",
@@ -51,12 +54,13 @@
       "start": "2016",
       "end": "2017"
     },
-    "description": "Cocktail recipes. Travel guides. Long-form essays about drink culture and history. Basically The New Yorker of the beer, wine, and cocktail world.",
+    "description": "Cocktail recipes. Travel guides. Long-form essays about drink culture and history. Basically, The New Yorker of the beverage world.",
     "responsibilities": [
       "design",
       "front-end development",
       "WordPress"
-    ]
+    ],
+    "published": "true"
   },
   {
     "title": "WBUR",
@@ -70,7 +74,8 @@
     "responsibilities": [
       "design",
       "front-end development"
-    ]
+    ],
+    "published": "false"
   },
   {
     "title": "Taste",
@@ -85,7 +90,8 @@
       "design",
       "front-end development",
       "WordPress"
-    ]
+    ],
+    "published": "true"
   },
   {
     "title": "Center for Curatorial Leadership",
@@ -99,7 +105,8 @@
     "responsibilities": [
       "front-end development",
       "Django"
-    ]
+    ],
+    "published": "true"
   },
   {
     "title": "Strada",
@@ -113,6 +120,7 @@
     "responsibilities": [
       "design",
       "front-end development"
-    ]
+    ],
+    "published": "true"
   }
 ]
