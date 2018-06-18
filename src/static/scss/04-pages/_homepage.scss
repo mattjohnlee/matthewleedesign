@@ -43,7 +43,7 @@
 .for-example {
   @include container-padded;
   @include smallcaps;
-  font-weight: bold;
+  color: $color-base;
   margin-top: $spacing-lg;
   margin-bottom: $spacing-md;
 }
