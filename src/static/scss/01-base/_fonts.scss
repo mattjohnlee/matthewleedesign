@@ -29,9 +29,16 @@ Embed custom fonts here
 
 @include font-face(
   $family-name: Stanley,
-  $file-name: StanleyPoster-Regular,
+  $file-name: StanleyRegular-Regular,
   $font-weight: 400,
   $font-style: normal
+);
+
+@include font-face(
+  $family-name: Stanley,
+  $file-name: StanleyRegular-Italic,
+  $font-weight: 400,
+  $font-style: italic
 );
 
 @include font-face(
