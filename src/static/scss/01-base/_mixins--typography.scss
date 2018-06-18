@@ -147,7 +147,7 @@ Stylistic applications
 */
 
 @mixin fluid-headline {
-  @include fluid-font-size(24px $sm, 40px $xl);
+  @include fluid-font-size(30px $sm, 48px $xl);
 }
 
 

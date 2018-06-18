@@ -1,7 +1,42 @@
-/* 
+/*
 ////////////////////////////////////////////////////////////////////////////
 Embed custom fonts here
 ////////////////////////////////////////////////////////////////////////////
 */
 
 
+@charset 'UTF-8';
+
+// @font-face mixin
+
+@mixin font-face($family-name, $file-name, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    $font-path: '../fonts/#{$file-name}';
+    font-family: '#{$family-name}';
+    src: local('☺'), url($font-path+'.woff') format('woff'),
+      url($font-path+'.woff2') format('woff2'), url($font-path+'.eot?iefix') format('eot');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@include font-face(
+  $family-name: Roslindale,
+  $file-name: RoslindaleCondensed-Regular,
+  $font-weight: 400,
+  $font-style: normal
+);
+
+@include font-face(
+  $family-name: Stanley,
+  $file-name: StanleyPoster-Regular,
+  $font-weight: 400,
+  $font-style: normal
+);
+
+@include font-face(
+  $family-name: Morion,
+  $file-name: Morion-Regular,
+  $font-weight: 400,
+  $font-style: normal
+);

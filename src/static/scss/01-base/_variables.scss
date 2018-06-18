@@ -28,7 +28,8 @@ Color values -- primary
 ////////////////////////////////////////////////////////////////////////////
 */
 
-$color-red: hsla(30, 100, 55, 1);
+// $color-red: hsla(30, 100, 55, 1);
+$color-red: hsla(5, 90, 66, 1);
 $color-yellow: hsla(65,100,57,1);
 $color-green: hsla(70, 80, 70, 1);
 $color-blue: hsla(232, 65, 54, 1);
@@ -82,7 +83,10 @@ Typographic variables
 */
 
 $font-family-sans: Helvetica, Arial, sans-serif;
-$font-family-serif: 'Lora', Georgia, 'Times New Roman', serif;
+// $font-family-serif: 'Lora', Georgia, 'Times New Roman', serif;
+// $font-family-serif: 'Spectral', Georgia, 'Times New Roman', serif;
+// $font-family-serif: 'Eczar', Georgia, 'Times New Roman', serif;
+$font-family-serif: 'Stanley', Georgia, 'Times New Roman', serif;
 $font-family-display: $font-family-serif;
 $font-family-monospace: 'Space Mono', Courier, monospace;
 
