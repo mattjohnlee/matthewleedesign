@@ -16,19 +16,12 @@ title: Matthew Lee Design
       <p>I currently work with the fine folks at <a href="https://www.upstatement.com">Upstatement</a> in Boston. I’m the Design Lead of Release Team, which focuses on the long-term growth and evolution of websites — essentially, product design for organizations without in-house digital teams. I’ve been lucky to work with a wide range of clients, sometimes for months, sometimes for years<!--  — including <a href="https://www.thetrace.org" class="hp__interest-item js-interest-item"><span class="hp__interest-h">The Trace</span><video class="hp__interests-hover-image js-hp-hover-img" autoplay preload muted loop><source src="/static/img/trace.mp4" type="video/mp4"></video></a>, <a href="http://www.wbur.org">WBUR</a>, <a href="https://www.177milkstreet.com">Christopher Kimball’s Milk Street</a>, <a href="http://www.engine.xyz">The Engine</a>, <a href="http://www.tastecooking.com">Taste</a>, and <a href="http://www.punchdrink.com">Punch</a> -->.</p>
 
       <p>If you’d like to chat about typography, modular Sass structure, bocce technique, weird amaros, or the finer points of homemade pierogi, don’t hesitate to say hi via <a href="mailto:matthewleedesign@gmail.com">email</a> or <a href="https://www.twitter.com/mattjohnlee">Twitter</a>. I’m from the Midwest, so I’m predisposed to chattiness.</p>
-
-        <!-- <span class="hp__interest-item js-interest-item">
-          <span class="hp__interest-h">Project Title</span>
-          <img data-src="/static/img/screenshot-trace.png" class="hp__interests-hover-image js-hp-hover-img" alt="alt">
-        </span> -->
-         <!--  <video class="hp__interests-hover-image js-hp-hover-img" autoplay preload muted loop><source src="/static/img/trace.mp4" type="video/mp4"></video> -->
-
   </div>
 </section>
 
 <section class="hp-bottom">
   <div class="projects">
-    <h2 class="for-example">For Example</h2>
+    <h2 class="for-example">for example</h2>
 
     {% set projects = data.projects %}
 
@@ -49,7 +42,7 @@ title: Matthew Lee Design
             <li>{{item}}</li>
           {% endfor %}
           </ul> #}
-          <img data-src="/static/img/screenshot-{{project.abbr}}.png" class="hp__interests-hover-image js-hp-hover-img" alt="Screenshot of {{project.title}}">
+          <img src="/static/img/screenshot-{{project.abbr}}.png" class="hp__interests-hover-image js-hp-hover-img" alt="Screenshot of {{project.title}}">
         </a>
       </li>
       {% endif %}
