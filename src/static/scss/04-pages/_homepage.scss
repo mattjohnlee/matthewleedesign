@@ -24,10 +24,11 @@
 
   @include mq($bp-nav) {
     position: fixed;
-    max-width: 69vw;
+    width: 69vw;
+    max-width: 1600px;
     left: 50%;
     top: 50%;
-    transform: translate3d(-15%, -95%, 0);
+    transform: translate3d(-15%, -105%, 0);
     box-shadow: 0 0 20px rgba($color-black, .3);
     display: block;
     opacity: 0;
