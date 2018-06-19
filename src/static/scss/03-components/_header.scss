@@ -6,7 +6,6 @@ header {
   height: $header-height;
 	top: 0;
 	z-index: -1;
-	// background-color: $color-gray-light;
   background-color: $color-link--active;
 	color: $color-white;
 	margin-bottom: $spacing-lg;
@@ -34,7 +33,6 @@ header {
     color: $color-base;
     @include link-null;
     display: block;
-    // padding: $grid-padding/2 $grid-padding*2;
     @include animate-fast;
 
     &:hover, &:focus {
