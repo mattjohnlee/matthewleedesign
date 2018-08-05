@@ -21,15 +21,8 @@ Embed custom fonts here
 }
 
 @include font-face(
-  $family-name: Roslindale,
-  $file-name: RoslindaleCondensed-Regular,
-  $font-weight: 400,
-  $font-style: normal
-);
-
-@include font-face(
-  $family-name: Morion,
-  $file-name: Morion-Regular,
+  $family-name: Akkurat Mono,
+  $file-name: akkurat-mono,
   $font-weight: 400,
   $font-style: normal
 );
