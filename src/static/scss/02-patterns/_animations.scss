@@ -22,6 +22,12 @@ Animate all properties
   transition-timing-function: ease-in-out;
 }
 
+@mixin animate-smooth($property: all) {
+  transition-property: $property;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 /*
 ////////////////////////////////////////////////////////////////////////////
 Animate specific properties

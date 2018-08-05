@@ -82,10 +82,35 @@
     align-items: flex-start;
     padding-top: $spacing-lg;
     padding-bottom: $spacing-md;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      background-color: $color-selection-bg;
+      @include animate-smooth;
+    }
   }
 
   &:hover, &:focus {
     background-color: $color-selection-bg;
+
+    @include mq($bp-nav) {
+      background: none;
+
+      &:after {
+        width: 100%;
+        height: 100%;
+        transform: scaleX(1);
+      }
+    }
   }
 
   > * {
