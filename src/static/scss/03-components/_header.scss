@@ -1,5 +1,14 @@
 $header-height: 60px;
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 header {
   padding-left: $homepage-margin-top;
 	width: 100%;
@@ -40,5 +49,23 @@ header {
       color: $color-white;
     }
   }
-
 }
+
+.header-star-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  margin: 0 $spacing-xs;
+  animation: spin 2.5s linear infinite;
+  margin-bottom: -2px;
+}
+
+.header-star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-18%);
+  line-height: 1;
+}
+
