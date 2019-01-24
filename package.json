@@ -10,13 +10,13 @@
     "postinstall": "bower install && if [ \"$NODE_ENV\" = \"production\" ]; then gulp puppy-build --optimized; else gulp puppy-build; fi"
   },
   "dependencies": {
-    "bower": "^1.8.8",
+    "bower": "^1.7.9",
     "del": "^3.0.0",
-    "express": "^4.16.4",
+    "express": "^4.13.3",
     "front-matter": "^2.0.7",
-    "gulp": "^3.9.1",
+    "gulp": "^3.9.0",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.10.0",
+    "gulp-clean-css": "^3.9.0",
     "gulp-data": "^1.2.0",
     "gulp-debug": "^3.1.0",
     "gulp-filter": "^5.0.0",
@@ -24,23 +24,23 @@
     "gulp-if": "^2.0.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-modernizr": "1.0.0-alpha",
-    "gulp-rename": "^1.4.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sort": "^2.0.0",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-twig": "^1.1.1",
-    "gulp-uglify": "^3.0.1",
-    "gulp-useref": "^3.1.6",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.0.8",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.5",
-    "merge": "^1.2.1",
+    "merge": "^1.2.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^2.2.0",
-    "showdown": "^1.9.0",
+    "showdown": "^1.4.1",
     "vinyl-map": "^1.0.1",
     "yargs": "^9.0.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.9.9"
   }
 }

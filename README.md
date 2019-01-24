@@ -1,4 +1,4 @@
-# matthewleedesign 2018
+# matthewleedesign
 
 
 A [Puppy](https://github.com/Upstatement/generator-puppy) powered project.
