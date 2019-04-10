@@ -96,6 +96,7 @@ Block-level typographic elements
   line-height: $line-height-heading;
   margin: $font-margin--heading-text;
 
+
   a {
     @include link;
   }
@@ -148,6 +149,8 @@ Stylistic applications
 
 @mixin fluid-headline {
   @include fluid-font-size(30px $sm, 44px $xl);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
