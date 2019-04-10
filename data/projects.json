@@ -5,7 +5,7 @@
     "url": "http://www.thetrace.org",
     "date": {
       "start": "2016",
-      "end": "present"
+      "end": "2019"
     },
     "description": "An independent, nonpartisan, nonprofit newsroom dedicated to shining a light on America’s gun violence crisis.",
     "responsibilities": [
@@ -21,9 +21,9 @@
     "url": "http://www.177milkstreet.com",
     "date": {
       "start": "2017",
-      "end": "present"
+      "end": "2018"
     },
-    "description": "The lastest culinary media project from Chris Kimball, the founder of Cook’s Illustrated and America’s Test Kitchen.",
+    "description": "The lastest culinary media project from the founder of Cook’s Illustrated and America’s Test Kitchen.",
     "responsibilities": [
       "design",
       "front-end development",
@@ -54,7 +54,7 @@
       "start": "2016",
       "end": "2017"
     },
-    "description": "Cocktail recipes. Travel guides. Long-form essays about drink culture and history. Basically, The New Yorker of the beverage world.",
+    "description": "Cocktail recipes. Travel guides. Long-form essays about drink culture and history. Basically, <em>The New Yorker</em> of the beverage world.",
     "responsibilities": [
       "design",
       "front-end development",
@@ -116,7 +116,7 @@
       "start": "2014",
       "end": "2014"
     },
-    "description": "A cross-disciplinary firm that blends architecture, interior design, and landscape architecture, Strada creates the most innovative spaces in Pittsburgh and Philadelphia.",
+    "description": "A cross-disciplinary firm that blends architecture, interior design, and landscape architecture, creating the most innovative spaces in Pittsburgh and Philadelphia.",
     "responsibilities": [
       "design",
       "front-end development"
