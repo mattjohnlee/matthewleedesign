@@ -33,7 +33,7 @@
     "gulp-useref": "^3.0.8",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.5",
-    "lodash": ">=4.17.11",
+    "lodash": ">=4.17.13",
     "merge": "^1.2.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^2.2.0",
