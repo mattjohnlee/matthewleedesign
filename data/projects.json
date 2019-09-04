@@ -16,6 +16,21 @@
     "published": "true"
   },
   {
+    "title": "PBS NewsHour",
+    "abbr": "pbs",
+    "url": "https://www.pbs.org/newshour/election-results/balance-of-power",
+    "date": {
+      "start": "2018",
+      "end": "2018"
+    },
+    "description": "Election night graphics showing the shifting balance of power in the 2018 midterms, made in collaboration with Chartball.",
+    "responsibilities": [
+      "design",
+      "front-end development"
+    ],
+    "published": "true"
+  },
+  {
     "title": "Christopher Kimball’s Milk Street",
     "abbr": "milkstreet",
     "url": "http://www.177milkstreet.com",
