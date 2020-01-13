@@ -42,7 +42,10 @@ title: Matthew Lee Design
             <li>{{item}}</li>
           {% endfor %}
           </ul> #}
-          <img src="/static/img/screenshot-cropped-{{project.abbr}}.jpg" class="hp__interests-hover-image js-hp-hover-img" alt="Screenshot of {{project.title}}">
+          <!-- <img src="/static/img/screenshot-cropped-{{project.abbr}}.jpg" class="hp__interests-hover-image js-hp-hover-img" alt="Screenshot of {{project.title}}"> -->
+
+          <video class="hp__interests-hover-image js-hp-hover-img" autoplay preload muted loop><source src="/static/img/video--{{project.abbr}}.mp4" type="video/mp4"></video>
+
         </a>
       </li>
       {% endif %}
