@@ -2,22 +2,38 @@
   // Add your Javascript here
 
     this.$window        = $(window);
-    this.$interestItem  = $('.js-interest-item');
+    this.$project  = $('.js-project');
 
-    this.$interestItem.mousemove(function( event ) {
+    this.$project.mousemove(function( event ) {
       if ($(this).hasClass('show-image')) {
 
-        var $projectImg = $(this).find('.js-hp-hover-img');
+        var $projectImg = $(this).find('.js-project-img');
 
-        $projectImg.css({
+        $projectImg
+        .css({
           'left': event.clientX + 'px',
           'top': event.clientY + 'px'
-        }).attr('src', $projectImg.data('src'));
+        });
       }
-    }).hover(function() {
+    })
+
+    $project.hover(function() {
       $(this).addClass('show-image')
+
+      if ($(this).hasClass('js-project--video')) {
+
+        var $projectVid = $(this).find('.js-project-video');
+        $projectVid.attr('src', $projectVid.data('src'));
+        $projectVid.get(0).play();
+      }
     },
+
     function(){
       $(this).removeClass('show-image');
+
+      if ($(this).hasClass('js-project--video')) {
+        var $projectVid = $(this).find('.js-project-video');
+        $projectVid.attr('src', '');
+      }
     });
 })();

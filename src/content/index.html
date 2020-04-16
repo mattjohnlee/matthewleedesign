@@ -7,7 +7,7 @@ title: Matthew Lee Design
 <section class="hp-top">
   <div class="hp-top__intro">
       <h2>Why, hello there.</h2>
-      <p>I’m Matt, a <s>designer</s> <s>web designer</s> <s>front-end developer</s> <s>front-end designer</s> <s>UI/UX developer</s> <s>anything but React</s> <s>gf!bf&uh!jk@hj&3&h*</s></p>
+      <p>I’m Matt, a <s>designer</s> <s>web designer</s> <s>front-end developer</s> <s>front-end designer</s> <s>UI/UX developer</s> <s>gf!bf&uh!jk@hj&3&h*</s></p>
       <p>Let’s just go with “designer.”</p>
   </div>
   <div class="hp-top__body">
@@ -28,7 +28,7 @@ title: Matthew Lee Design
     <ul class="project-list">
     {% for project in projects %}
       {% if project.published == 'true' %}
-      <li class="project hp__interest-item js-interest-item">
+      <li class="project js-project {% if project.image == 'video' %}js-project--video{% endif %}">
         <a href="{{project.url}}" class="project-link">
           <div class="project-intro">
             <h3 class="project-name hp__interest-h">{{project.title}}</h3>
@@ -43,7 +43,15 @@ title: Matthew Lee Design
           {% endfor %}
           </ul> #}
 
-          <img src="/static/img/screenshot-cropped-{{project.abbr}}.jpg" class="hp__interests-hover-image js-hp-hover-img" alt="Screenshot of {{project.title}}">
+          {% if project.image == 'static' %}
+
+            {% include "../templates/partials/project-image.twig" %}
+
+          {% elseif project.image == 'video' %}
+
+            {% include "../templates/partials/project-video.twig" %}
+
+          {% endif %}
 
         </a>
       </li>
