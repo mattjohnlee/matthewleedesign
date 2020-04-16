@@ -21,9 +21,7 @@
       $(this).addClass('show-image')
 
       if ($(this).hasClass('js-project--video')) {
-
         var $projectVid = $(this).find('.js-project-video');
-        $projectVid.attr('src', $projectVid.data('src'));
         $projectVid.get(0).play();
       }
     },
@@ -33,7 +31,7 @@
 
       if ($(this).hasClass('js-project--video')) {
         var $projectVid = $(this).find('.js-project-video');
-        $projectVid.attr('src', '');
+        $projectVid.get(0).pause();
       }
     });
 })();
