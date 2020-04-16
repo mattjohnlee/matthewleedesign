@@ -43,7 +43,15 @@ title: Matthew Lee Design
           {% endfor %}
           </ul> #}
 
-          <img src="/static/img/screenshot-cropped-{{project.abbr}}.jpg" class="hp__interests-hover-image js-hp-hover-img" alt="Screenshot of {{project.title}}">
+          {% if project.image == 'static' %}
+
+            {% include "../templates/partials/project-image.twig" %}
+
+          {% elseif project.image == 'video' %}
+
+            {% include "../templates/partials/project-video.twig" %}
+
+          {% endif %}
 
         </a>
       </li>
