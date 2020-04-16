@@ -28,7 +28,7 @@ title: Matthew Lee Design
     <ul class="project-list">
     {% for project in projects %}
       {% if project.published == 'true' %}
-      <li class="project hp__interest-item js-interest-item">
+      <li class="project js-project {% if project.image == 'video' %}js-project--video{% endif %}">
         <a href="{{project.url}}" class="project-link">
           <div class="project-intro">
             <h3 class="project-name hp__interest-h">{{project.title}}</h3>
