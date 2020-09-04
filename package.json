@@ -37,7 +37,7 @@
     "merge": "^1.2.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^2.2.0",
-    "showdown": "^1.4.1",
+    "showdown": "^1.9.1",
     "vinyl-map": "^1.0.1",
     "yargs": "^9.0.1"
   },
