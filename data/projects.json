@@ -1,13 +1,13 @@
 [
   {
-    "title": "GitHub",
-    "abbr": "github",
-    "url": "https://octoverse.github.com",
+    "title": "The ReadME Project",
+    "abbr": "readme",
+    "url": "https://github.com/readme",
     "date": {
-      "start": "2019",
-      "end": "2019"
+      "start": "2020",
+      "end": "present"
     },
-    "description": "“The State of the Octoverse,” an annual report highlighting open source trends and key metrics for the world’s largest developer platform.",
+    "description": "A digital publication from GitHub telling the stories of the maintainers, developers, and teams driving the open source community.",
     "responsibilities": [
       "design",
       "front-end development"
@@ -16,6 +16,21 @@
     "published": "true"
   },
   {
+    "title": "State of the Octoverse",
+    "abbr": "octoverse",
+    "url": "https://octoverse.github.com",
+    "date": {
+      "start": "2019",
+      "end": "2019"
+    },
+    "description": "GitHub’s annual report highlighting open source trends and key metrics for the world’s largest developer platform.",
+    "responsibilities": [
+      "design",
+      "front-end development"
+    ],
+    "image": "video",
+    "published": "true"
+  },  {
     "title": "The Trace",
     "abbr": "trace",
     "url": "http://www.thetrace.org",
