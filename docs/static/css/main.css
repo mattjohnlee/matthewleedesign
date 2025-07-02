@@ -484,7 +484,7 @@ Special Formatting
 ////////////////////////////////////////////////////////////////////////////
 */
 small {
-  font-size: 0.8rem; }
+  font-size: 0.7rem; }
 
 .smallcaps {
   text-transform: uppercase;
@@ -602,7 +602,7 @@ footer {
     clear: both; }
   footer p, footer li {
     margin-bottom: 0;
-    font-size: 0.8rem; }
+    font-size: 0.7rem; }
 
 .copyright {
   padding: 2em;
@@ -681,7 +681,7 @@ hr {
   padding: 0 6%;
   margin-left: 0;
   margin-top: 6%;
-  max-width: 60em; }
+  max-width: 65em; }
   .hp-top:after {
     content: "";
     display: table;
@@ -918,9 +918,20 @@ hr {
 .project-responsibilities {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  margin-top: -0.75rem; }
   .project-responsibilities li {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 0.7rem;
+    background-color: #f6f6f6;
+    padding: 0.07em 0.5em 0.03em;
+    -webkit-border-radius: 3px;
+            border-radius: 3px; }
 
 /* 05 -- individual third-party components */
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css */

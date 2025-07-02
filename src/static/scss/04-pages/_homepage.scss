@@ -2,7 +2,7 @@
   @include container-padded;
   margin-left: 0;
   margin-top: $homepage-margin-top;
-  max-width: 60em;
+  max-width: 65em;
 }
 
 .hp-top__intro {
@@ -153,8 +153,15 @@
 
 .project-responsibilities {
   @include ul-null;
+  display: flex;
+  gap: $spacing-xs;
+  margin-top: -$spacing-xs;
 
   li {
     margin-bottom: 0;
+    @include small;
+    background-color: tint($color-text, 95%);
+    padding: 0.07em 0.5em 0.03em;
+    border-radius: 3px;
   }
 }

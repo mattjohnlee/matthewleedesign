@@ -38,13 +38,15 @@ title: Matthew Lee Design
           </div>
           <div class="project-description">
             <p>{{project.description}}</p>
-          </div>
-          {# <ul class="project-responsibilities">
-          {% for item in project.responsibilities %}
-            <li>{{item}}</li>
-          {% endfor %}
-          </ul> #}
 
+            <ul class="project-responsibilities">
+            {% for item in project.responsibilities %}
+              <li>{{item}}</li>
+            {% endfor %}
+            </ul>
+
+
+          </div>
           {% if project.image == 'static' %}
 
             {% include "../templates/partials/project-image.twig" %}

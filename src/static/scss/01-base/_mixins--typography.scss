@@ -153,7 +153,6 @@ Stylistic applications
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 @mixin ul-null {
   list-style: none;
   margin: 0;
@@ -171,7 +170,7 @@ Stylistic applications
 }
 
 @mixin small {
-  font-size: $font-size-small;
+  font-size: $font-size-xs;
 }
 
 // Fancy Underline
