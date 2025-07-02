@@ -3,6 +3,15 @@
   margin-left: 0;
   margin-top: $homepage-margin-top;
   max-width: 65em;
+
+  @include mq($bp-intro-columns) {
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: $spacing-md;
+    gap: 5%;
+  }
 }
 
 .hp-top__intro {
@@ -14,10 +23,26 @@
   @include mq($bp-nav) {
     margin-top: -1%;
   }
+
+  @include mq($bp-intro-columns) {
+    margin-top: -0.333%;
+    width: 35%;
+    flex-shrink: 0;
+  }
 }
 
 .hp-top__body {
-  text-wrap: pretty;
+  @include mq($bp-intro-columns) {
+    width: 60%;
+    flex-shrink: 0;
+  }
+
+  p {
+    @include mq($bp-intro-columns) {
+      font-size: $font-size-h4;
+      max-width: 55em;
+    }
+  }
 }
 
 .project-image {
@@ -131,6 +156,12 @@
     width: 60%;
     z-index: -1;
   }
+  p {
+    @include mq($bp-intro-columns) {
+      max-width: 65em;
+      text-wrap: pretty;
+    }
+  }
 }
 
 .project-name {
@@ -154,6 +185,7 @@
 .project-responsibilities {
   @include ul-null;
   display: flex;
+  flex-wrap: wrap;
   gap: $spacing-xs;
   margin-top: -$spacing-xs;
 
@@ -163,5 +195,6 @@
     background-color: tint($color-text, 95%);
     padding: 0.07em 0.5em 0.03em;
     border-radius: 3px;
+    white-space: nowrap;
   }
 }

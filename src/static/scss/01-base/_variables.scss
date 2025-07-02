@@ -95,13 +95,13 @@ $font-family-base: $font-family-monospace;
 $font-family-heading: $font-family-display;
 
 
-$font-size-base: 1.1rem;
+$font-size-base: 1rem;
 $font-size-small: .8rem;
 $font-size-xs: .7rem;
 $font-size-h1: 3.5rem;
 $font-size-h2: 3rem;
 $font-size-h3: 1.5rem;
-$font-size-h4: 1.2rem;
+$font-size-h4: 1.15rem;
 $font-size-h5: 1rem;
 $font-size-h6: .8rem;
 $font-size-p: $font-size-base;
@@ -168,6 +168,7 @@ $xl:    1200px;
 $xxl:   1400px;
 
 $bp-nav: $lg;
+$bp-intro-columns: 1700px;
 
 /*
 ////////////////////////////////////////////////////////////////////////////

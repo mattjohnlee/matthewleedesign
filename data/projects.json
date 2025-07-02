@@ -1,5 +1,23 @@
 [
   {
+    "title": "Shopify Unite",
+    "abbr": "unite",
+    "url": "https://web.archive.org/web/20220830080450if_/https://unite.shopify.com/",
+    "date": {
+      "start": "2022",
+      "end": "2022"
+    },
+    "description": "Branding and site design for Shopify’s first in-person developer event following the Covid pandemic.",
+    "responsibilities": [
+      "branding",
+      "design",
+      "front-end development",
+      "React"
+    ],
+    "image": "video",
+    "published": "true"
+  },
+  {
     "title": "GitHub Blog",
     "abbr": "githubblog",
     "url": "https://github.blog",
@@ -25,6 +43,7 @@
     },
     "description": "A digital publication from GitHub telling the stories of the maintainers, developers, and teams driving the open source community.",
     "responsibilities": [
+      "branding",
       "design",
       "front-end development",
       "Ruby on Rails"
@@ -51,7 +70,7 @@
   },  {
     "title": "The Trace",
     "abbr": "trace",
-    "url": "http://www.thetrace.org",
+    "url": "https://web.archive.org/web/20201101003556if_/https://www.thetrace.org/",
     "date": {
       "start": "2016",
       "end": "2019"
@@ -59,7 +78,7 @@
     "description": "An independent, nonpartisan, nonprofit newsroom dedicated to shining a light on America’s gun violence crisis.",
     "responsibilities": [
       "design",
-      "front-end",
+      "front-end development",
       "WordPress"
     ],
     "image": "video",
@@ -68,7 +87,7 @@
   {
     "title": "PBS NewsHour",
     "abbr": "pbs",
-    "url": "https://www.pbs.org/newshour/election-results/balance-of-power",
+    "url": "https://web.archive.org/web/20190101221832if_/https://www.pbs.org/newshour/election-results/balance-of-power",
     "date": {
       "start": "2018",
       "end": "2018"
@@ -123,7 +142,7 @@
       "start": "2016",
       "end": "2017"
     },
-    "description": "Cocktail recipes. Travel guides. Long-form essays about drink culture and history. Basically, <em>The New Yorker</em> of the beverage world.",
+    "description": "Cocktail recipes. Travel guides. Long-form essays about drink culture and history. Punch is a digital media brand that acts as <em>The New Yorker</em> of the beverage world.",
     "responsibilities": [
       "design",
       "front-end development",
@@ -179,7 +198,7 @@
       "Django"
     ],
     "image": "video",
-    "published": "true"
+    "published": "false"
   },
   {
     "title": "Strada",

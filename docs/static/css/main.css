@@ -310,7 +310,7 @@ h4 {
   color: #3355ff;
   line-height: 1.2;
   margin: 0 0 2.5rem;
-  font-size: 1.2rem; }
+  font-size: 1.15rem; }
   h4 a {
     color: #3355ff;
     text-decoration: none;
@@ -418,9 +418,10 @@ p {
   font-family: "CustomFont", "Akkurat Mono", Courier, monospace;
   font-weight: 400;
   color: #4e4647;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.9;
-  margin: 0 0 2rem; }
+  margin: 0 0 2rem;
+  letter-spacing: -0.025em; }
 
 ul li, ol li {
   margin-bottom: 1em; }
@@ -429,9 +430,10 @@ li {
   font-family: "CustomFont", "Akkurat Mono", Courier, monospace;
   font-weight: 400;
   color: #4e4647;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.9;
-  margin: 0 0 2rem; }
+  margin: 0 0 2rem;
+  letter-spacing: -0.025em; }
 
 ul {
   list-style: disc;
@@ -541,15 +543,17 @@ header {
       -webkit-transform-origin: 0 100%;
           -ms-transform-origin: 0 100%;
               transform-origin: 0 100%;
-      top: -60px; } }
+      top: -60px;
+      width: 200%; } }
 
 .header-logo {
   font-family: "CustomFont", "Akkurat Mono", Courier, monospace;
   font-weight: 400;
   color: #4e4647;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.9;
   margin: 0 0 2rem;
+  letter-spacing: -0.025em;
   font-size: 0.8rem;
   margin-bottom: 0; }
   .header-logo a {
@@ -632,9 +636,10 @@ body {
   font-family: "CustomFont", "Akkurat Mono", Courier, monospace;
   font-weight: 400;
   color: #4e4647;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.9;
   margin: 0 0 2rem;
+  letter-spacing: -0.025em;
   color: #4e4647;
   background-color: #ffffff;
   position: relative; }
@@ -689,6 +694,23 @@ hr {
   @media (min-width: 960px) {
     .hp-top {
       padding: 0 4% 0 12%; } }
+  @media (min-width: 1700px) {
+    .hp-top {
+      max-width: none;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      padding-bottom: 1.5rem;
+      gap: 5%; } }
 
 .hp-top__intro * {
   font-family: "Stanley", Georgia, "Times New Roman", serif;
@@ -735,8 +757,25 @@ hr {
   .hp-top__intro {
     margin-top: -1%; } }
 
-.hp-top__body {
-  text-wrap: pretty; }
+@media (min-width: 1700px) {
+  .hp-top__intro {
+    margin-top: -0.333%;
+    width: 35%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; } }
+
+@media (min-width: 1700px) {
+  .hp-top__body {
+    width: 60%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; } }
+
+@media (min-width: 1700px) {
+  .hp-top__body p {
+    font-size: 1.15rem;
+    max-width: 55em; } }
 
 .project-image {
   display: none; }
@@ -891,6 +930,11 @@ hr {
     width: 60%;
     z-index: -1; } }
 
+@media (min-width: 1700px) {
+  .project-description p {
+    max-width: 65em;
+    text-wrap: pretty; } }
+
 .project-name {
   font-size: 30px;
   -webkit-font-smoothing: antialiased;
@@ -923,6 +967,9 @@ hr {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: -0.75rem; }
   .project-responsibilities li {
@@ -931,7 +978,8 @@ hr {
     background-color: #f6f6f6;
     padding: 0.07em 0.5em 0.03em;
     -webkit-border-radius: 3px;
-            border-radius: 3px; }
+            border-radius: 3px;
+    white-space: nowrap; }
 
 /* 05 -- individual third-party components */
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css */
