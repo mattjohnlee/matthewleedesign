@@ -1,5 +1,22 @@
 [
   {
+    "title": "Shopify Theme Store",
+    "abbr": "themestore",
+    "url": "https:themes.shopify.com/",
+    "date": {
+      "start": "2025",
+      "end": "2025"
+    },
+    "description": "An immersive redesign of Shopify’s marketplace for themes, featuring live embedded demo stores and a clearer taxonomy for discovery.",
+    "responsibilities": [
+      "design systems",
+      "front-end development",
+      "Ruby on Rails"
+    ],
+    "image": "video",
+    "published": "true"
+  },
+  {
     "title": "Shopify Unite",
     "abbr": "unite",
     "url": "https://web.archive.org/web/20220830080450if_/https://unite.shopify.com/",
