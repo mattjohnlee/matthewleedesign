@@ -17,6 +17,24 @@
     "published": "true"
   },
   {
+    "title": "Shopify App Store",
+    "abbr": "appstore",
+    "url": "https://apps.shopify.com/",
+    "date": {
+      "start": "2022",
+      "end": "2025"
+    },
+    "description": "Personalized recommendations and editorial stories that guide merchants to the apps that help them customize their storefronts.",
+    "responsibilities": [
+      "design systems",
+      "product design",
+      "front-end development",
+      "Ruby on Rails"
+    ],
+    "image": "video",
+    "published": "true"
+  },
+  {
     "title": "Shopify Unite",
     "abbr": "unite",
     "url": "https://web.archive.org/web/20220830080450if_/https://unite.shopify.com/",
