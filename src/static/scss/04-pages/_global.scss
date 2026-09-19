@@ -44,6 +44,10 @@ body {
   @include container;
 }
 
+.container-padded {
+  @include container-padded;
+}
+
 s {
   text-decoration: line-through;
   text-decoration-style: wavy;

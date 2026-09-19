@@ -10,8 +10,8 @@ Basic font style mixins
 }
 
 @mixin font-bold {
-  font-family: 'CustomFont', $serif;
   font-weight: $font-weight-bold;
+  color: $color-gray-0;
 }
 
 @mixin font-italic {

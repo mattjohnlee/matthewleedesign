@@ -37,12 +37,32 @@
     flex-shrink: 0;
   }
 
-  p {
+  p, li {
+    text-wrap: pretty;
     @include mq($bp-intro-columns) {
       font-size: $font-size-h4;
       max-width: 55em;
     }
   }
+}
+
+.previous {
+  margin: 0 0 2rem 0;
+  
+  li {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;  
+
+    &::before {
+      content: "*";
+      position: absolute;
+      left: 0;
+      top: .15em;
+    }
+  }
+
+
 }
 
 .project-image {
@@ -169,6 +189,7 @@
   margin-bottom: 0;
   position: relative;
   z-index: -1;
+  text-wrap: pretty;
 }
 
 .project-date {
