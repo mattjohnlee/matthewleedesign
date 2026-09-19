@@ -139,7 +139,7 @@
   {
     "title": "Christopher Kimball’s Milk Street",
     "abbr": "milkstreet",
-    "url": "http://www.177milkstreet.com",
+    "url": "https://web.archive.org/web/20181213155049if_/https://www.177milkstreet.com/",
     "date": {
       "start": "2017",
       "end": "2018"
@@ -151,7 +151,7 @@
       "Craft CMS"
     ],
     "image": "static",
-    "published": "false"
+    "published": "true"
   },
   {
     "title": "Contemporary Art Museum St. Louis",

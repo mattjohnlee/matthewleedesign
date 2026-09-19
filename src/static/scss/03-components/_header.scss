@@ -38,35 +38,13 @@ header {
 	@include paragraph;
   font-size: $font-size-small;
 	margin-bottom: 0;
-
-  a {
-    color: $color-base;
-    @include link-null;
-    display: block;
-    @include animate-fast;
-
-    &:hover, &:focus {
-      background-color: $color-link;
-      color: $color-white;
-    }
-  }
+  display: flex;
+  align-items: center;
 }
 
-.header-star-wrapper {
-  display: inline-block;
-  position: relative;
-  width: 1em;
-  height: 1em;
+.spinning-star {
+  width: .4rem;
   margin: 0 $spacing-xs;
   animation: spin 2.5s linear infinite;
-  margin-bottom: -2px;
-}
-
-.header-star {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-18%);
-  line-height: 1;
 }
 
