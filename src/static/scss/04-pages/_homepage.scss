@@ -74,12 +74,24 @@
     max-width: 50vw;
     left: 50%;
     top: 50%;
-    transform: translate3d(-15%, -105%, 0);
+    transform: translate3d(-10%, -105%, 0);
     box-shadow: 0 0 20px rgba($color-black, .3);
     display: block;
     opacity: 0;
     pointer-events: none;
     @include animate-fast(opacity);
+
+    &.flip-x {
+      transform: translate3d(-90%, -105%, 0);
+    }
+
+    &.flip-y {
+      transform: translate3d(-10%, 5%, 0);
+    }
+
+    &.flip-x.flip-y {
+      transform: translate3d(-90%, 5%, 0);
+    }
 
     .show-image & {
       opacity: 1;
