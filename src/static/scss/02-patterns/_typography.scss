@@ -124,3 +124,7 @@ Special Formatting
 .caps {
   @include caps;
 }
+
+.fancy-link {
+  white-space: nowrap;
+}

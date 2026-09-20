@@ -50,15 +50,15 @@
   margin: 0 0 2rem 0;
   
   li {
-    list-style: none;
     position: relative;
+    list-style: none;
     padding-left: 20px;  
 
-    &::before {
-      content: "*";
+    .spinning-star {
       position: absolute;
       left: 0;
-      top: .15em;
+      top: .625em;
+      margin: 0;
     }
   }
 

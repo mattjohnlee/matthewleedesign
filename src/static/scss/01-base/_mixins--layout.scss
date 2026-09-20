@@ -19,7 +19,7 @@
 
 @mixin container-padded {
   @include container;
-  padding: 0 $grid-padding*3;
+  padding: 0 $grid-padding*2;
 
   @include mq($bp-nav) {
   padding: 0 $grid-padding*2 0 $grid-padding*6;

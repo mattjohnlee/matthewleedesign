@@ -44,7 +44,7 @@ header {
 
 .spinning-star {
   width: .4rem;
-  margin: 0 $spacing-xs;
+  margin: 0 $spacing-xs .125em;
   animation: spin 2.5s linear infinite;
 }
 
