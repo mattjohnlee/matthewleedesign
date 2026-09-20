@@ -1,37 +1,33 @@
 (function () {
-  // Add your Javascript here
+  var projects = document.querySelectorAll('.js-project');
 
-    this.$window        = $(window);
-    this.$project  = $('.js-project');
-
-    this.$project.mousemove(function( event ) {
-      if ($(this).hasClass('show-image')) {
-
-        var $projectImg = $(this).find('.js-project-img');
-
-        $projectImg
-        .css({
-          'left': event.clientX + 'px',
-          'top': event.clientY + 'px'
-        });
-      }
-    })
-
-    $project.hover(function() {
-      $(this).addClass('show-image')
-
-      if ($(this).hasClass('js-project--video')) {
-        var $projectVid = $(this).find('.js-project-video');
-        $projectVid.get(0).play();
-      }
-    },
-
-    function(){
-      $(this).removeClass('show-image');
-
-      if ($(this).hasClass('js-project--video')) {
-        var $projectVid = $(this).find('.js-project-video');
-        $projectVid.get(0).pause();
+  projects.forEach(function (project) {
+    project.addEventListener('mousemove', function (event) {
+      if (project.classList.contains('show-image')) {
+        var projectImg = project.querySelector('.js-project-img');
+        if (projectImg) {
+          projectImg.style.left = event.clientX + 'px';
+          projectImg.style.top = event.clientY + 'px';
+        }
       }
     });
+
+    project.addEventListener('mouseenter', function () {
+      project.classList.add('show-image');
+
+      if (project.classList.contains('js-project--video')) {
+        var projectVid = project.querySelector('.js-project-video');
+        if (projectVid) projectVid.play();
+      }
+    });
+
+    project.addEventListener('mouseleave', function () {
+      project.classList.remove('show-image');
+
+      if (project.classList.contains('js-project--video')) {
+        var projectVid = project.querySelector('.js-project-video');
+        if (projectVid) projectVid.pause();
+      }
+    });
+  });
 })();

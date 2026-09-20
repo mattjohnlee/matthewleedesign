@@ -497,6 +497,9 @@ small {
   text-transform: uppercase;
   letter-spacing: 2px; }
 
+.fancy-link {
+  white-space: nowrap; }
+
 /* 03 -- individual components reused throughout multiple layouts: header, footer, navigation, sidebars, carousels, etc. */
 @-webkit-keyframes spin {
   from {
@@ -567,7 +570,7 @@ header {
 
 .spinning-star {
   width: .4rem;
-  margin: 0 0.75rem;
+  margin: 0 0.75rem 0.125em;
   -webkit-animation: spin 2.5s linear infinite;
           animation: spin 2.5s linear infinite; }
 
@@ -648,7 +651,7 @@ body {
   position: relative;
   margin: 0 auto;
   max-width: none;
-  padding: 0 6%; }
+  padding: 0 4%; }
   .container-padded:after {
     content: "";
     display: table;
@@ -674,7 +677,7 @@ hr {
   position: relative;
   margin: 0 auto;
   max-width: none;
-  padding: 0 6%;
+  padding: 0 4%;
   margin-left: 0;
   margin-top: 6%;
   max-width: 65em; }
@@ -773,14 +776,14 @@ hr {
 .previous {
   margin: 0 0 2rem 0; }
   .previous li {
-    list-style: none;
     position: relative;
+    list-style: none;
     padding-left: 20px; }
-    .previous li::before {
-      content: "*";
+    .previous li .spinning-star {
       position: absolute;
       left: 0;
-      top: .15em; }
+      top: .625em;
+      margin: 0; }
 
 .project-image {
   display: none; }
@@ -814,7 +817,7 @@ hr {
   position: relative;
   margin: 0 auto;
   max-width: none;
-  padding: 0 6%;
+  padding: 0 4%;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.8rem;
@@ -850,7 +853,7 @@ hr {
   position: relative;
   margin: 0 auto;
   max-width: none;
-  padding: 0 6%;
+  padding: 0 4%;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
   margin-bottom: 0;
