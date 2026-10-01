@@ -55,7 +55,7 @@
   {
     "title": "GitHub Blog",
     "abbr": "githubblog",
-    "url": "https://github.blog",
+    "url": "https://web.archive.org/web/20220401013118if_/https://github.blog/",
     "date": {
       "start": "2021",
       "end": "2021"
@@ -71,7 +71,7 @@
   {
     "title": "The ReadME Project",
     "abbr": "readme",
-    "url": "https://github.com/readme",
+    "url": "https://web.archive.org/web/20210601004838if_/github.com/readme",
     "date": {
       "start": "2020",
       "end": "2021"
